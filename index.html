@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1614 Home Co. | Quarterly home maintenance in Hilliard, Upper Arlington, Dublin, and Plain City</title>
+<meta name="description" content="Quarterly home maintenance membership for Hilliard, Upper Arlington, Dublin, and Plain City. Filters, leak-sensor checks, sump and smoke/CO checks, seasonal maintenance, and a documented Home Record. Founding Membership from $699 for year one.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B2239'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23F5F1E8' text-anchor='middle'%3E1614%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2239; --navy-2:#132F4C; --cream:#F5F1E8; --paper:#FBF9F4;
+    --sage:#AAB89C; --sage-deep:#6F7F62; --ink:#1C2733; --muted:#56606B;
+    --serif:"Libre Caslon Text", Georgia, "Times New Roman", serif;
+    --sans:"Lato", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+  /* header */
+  .bar{background:var(--navy);color:var(--cream)}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:4.25rem;gap:1rem}
+  .mark{font:700 1.35rem/1 var(--serif);text-decoration:none;letter-spacing:.01em}
+  .bar-call{font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(245,241,232,.35);padding-bottom:2px}
+  .bar-call:hover{border-bottom-color:var(--sage)}
+
+  /* hero */
+  .hero{background:var(--navy);color:var(--cream);padding:4.5rem 0 0;overflow:hidden}
+  .hero h1{font:400 clamp(2.6rem,6.4vw,5rem)/1.04 var(--serif);margin:0;max-width:13ch;letter-spacing:-.01em}
+  .hero p.lede{font-size:1.2rem;line-height:1.6;max-width:38rem;margin:1.5rem 0 0;color:#E4E0D6}
+  .actions{display:flex;flex-wrap:wrap;gap:.9rem 1.25rem;align-items:center;margin:2.25rem 0 0}
+  .btn{display:inline-block;background:var(--cream);color:var(--navy);font-weight:700;text-decoration:none;padding:.95rem 1.5rem;border-radius:4px}
+  .btn:hover{background:#fff}
+  .link-quiet{color:var(--cream);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(245,241,232,.4);padding-bottom:2px}
+  .founding{margin:1.75rem 0 0;font-size:.98rem;color:#C9D1C1}
+
+  /* the waterline: one deliberate element */
+  .waterline{position:relative;height:5.5rem;margin-top:3.5rem}
+  .waterline svg{position:absolute;inset:auto 0 0 0;width:100%;height:100%;display:block}
+
+  /* year strip */
+  .year{background:var(--paper);padding:4.5rem 0 3.5rem}
+  .year h2,.included h2,.quote h2{font:400 clamp(1.8rem,3.4vw,2.5rem)/1.15 var(--serif);margin:0 0 .75rem;color:var(--navy)}
+  .year .intro{max-width:40rem;color:var(--muted);margin:0 0 2.5rem}
+  .seasons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--navy)}
+  .seasons li{padding:1.1rem 1rem 0 0;position:relative}
+  .seasons li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--navy)}
+  .seasons .n{font:400 .95rem var(--serif);font-style:italic;color:var(--sage-deep)}
+  .seasons .s{display:block;font:700 1.3rem/1.3 var(--serif);color:var(--navy);margin-top:.2rem}
+
+  /* included */
+  .included{background:var(--cream);padding:4.5rem 0}
+  .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:start}
+  .checks{list-style:none;margin:1.5rem 0 0;padding:0}
+  .checks li{padding:.85rem 0 .85rem 2rem;border-bottom:1px solid #DDD6C6;position:relative}
+  .checks li::before{content:"";position:absolute;left:.1rem;top:1.35rem;width:.9rem;height:.45rem;border-left:2px solid var(--sage-deep);border-bottom:2px solid var(--sage-deep);transform:rotate(-45deg)}
+  .setup{background:var(--paper);border-left:4px solid var(--sage);padding:1.75rem 1.75rem 1.5rem}
+  .setup h3{font:700 1.3rem/1.3 var(--serif);color:var(--navy);margin:0 0 .6rem}
+  .setup p{margin:0 0 .9rem}
+  .setup .fine{font-size:.92rem;color:var(--muted);margin:0}
+  .price{font:400 2.1rem/1.1 var(--serif);color:var(--navy);margin:0 0 .2rem}
+  .price-note{font-size:.95rem;color:var(--muted);margin:0 0 1.4rem}
+
+  /* quote */
+  .quote{background:var(--paper);padding:4.5rem 0 3rem}
+  .quote .intro{max-width:40rem;color:var(--muted);margin:0 0 2rem}
+  .form-frame{background:#fff;border:1px solid #E3DDCF;border-radius:6px;padding:.25rem;max-width:52rem}
+  .form-frame iframe{width:100%;min-height:900px;border:0;display:block}
+
+  /* footer */
+  footer{background:var(--navy);color:#CFD5DC;padding:2.75rem 0;font-size:.95rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
+  footer strong{color:var(--cream);font:700 1.15rem var(--serif);display:block;margin-bottom:.35rem}
+  footer p{margin:.2rem 0}
+  footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
+
+  @media (max-width: 860px){
+    .grid2{grid-template-columns:1fr;gap:2.25rem}
+    .seasons{grid-template-columns:repeat(2,1fr);row-gap:1.75rem;border-top:0}
+    .seasons li{border-top:2px solid var(--navy)}
+    .hero{padding-top:3.25rem}
+  }
+  @media (max-width: 520px){
+    .bar-call span{display:none}
+    .hero p.lede{font-size:1.08rem}
+    .form-frame{padding:0;border:0;background:transparent}
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="/">1614 Home Co.</a>
+    <a class="bar-call" href="tel:+16145357919"><span>Call or text </span>(614) 535-7919</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Keep water where it belongs.</h1>
+      <p class="lede">Quarterly home maintenance for homeowners in Hilliard, Upper Arlington, Dublin, and Plain City. One person who knows your house, four visits a year, and a written record of every one.</p>
+      <div class="actions">
+        <a class="btn" href="#quote">Get my quote</a>
+        <a class="link-quiet" href="tel:+16145357919">Or call (614) 535-7919</a>
+      </div>
+      <p class="founding">Founding Membership from $699 for year one, limited to the first 25 homes.</p>
+    </div>
+    <div class="waterline" aria-hidden="true">
+      <svg viewBox="0 0 1440 88" preserveAspectRatio="none">
+        <path d="M0 40 C 180 18, 360 62, 540 40 S 900 18, 1080 40 S 1320 60, 1440 38 L1440 88 L0 88 Z" fill="#FBF9F4"/>
+        <path d="M0 40 C 180 18, 360 62, 540 40 S 900 18, 1080 40 S 1320 60, 1440 38" fill="none" stroke="#AAB89C" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="year" aria-labelledby="year-h">
+    <div class="wrap">
+      <h2 id="year-h">Four visits, one year</h2>
+      <p class="intro">Your home gets the same careful checklist every season, plus the task that season calls for. You get a dated record of what was done and what was found.</p>
+      <ol class="seasons">
+        <li><span class="n">Visit one</span><span class="s">Winter</span></li>
+        <li><span class="n">Visit two</span><span class="s">Spring</span></li>
+        <li><span class="n">Visit three</span><span class="s">Summer</span></li>
+        <li><span class="n">Visit four</span><span class="s">Fall</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="included" aria-labelledby="inc-h">
+    <div class="wrap grid2">
+      <div>
+        <h2 id="inc-h">Every visit includes</h2>
+        <ul class="checks">
+          <li>HVAC filter replacement for covered systems</li>
+          <li>Leak-sensor status and battery check, with a physical wet test on the water heater and sump sensors</li>
+          <li>Sump-pump check</li>
+          <li>Smoke and CO alarm check</li>
+          <li>One seasonal maintenance task</li>
+          <li>Home Record update with dated photos</li>
+        </ul>
+      </div>
+      <aside class="setup" aria-labelledby="setup-h">
+        <p class="price">From $799<span style="font-size:1rem;font-family:var(--sans);color:var(--muted)"> / year</span></p>
+        <p class="price-note">Founding Membership from $699 for year one.</p>
+        <h3 id="setup-h">Setup, from $199</h3>
+        <p>A leak-sensor hub and your first four sensors, a walkthrough of your home, tags on your main shutoffs, and a baseline Home Record.</p>
+        <p class="fine">Base pricing covers homes up to 3 bathrooms, 1 HVAC system, and 1 water heater. Half baths count. Final pricing after we review your home.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="quote" id="quote" aria-labelledby="quote-h">
+    <div class="wrap">
+      <h2 id="quote-h">Request your quote</h2>
+      <p class="intro">Takes about 2 minutes. Justin will review your home and send your quote within one business day.</p>
+      <div class="form-frame">
+        <iframe id="JotFormIFrame-262663327317055" title="1614 Home Co. quote request" allow="geolocation" scrolling="no" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>1614 Home Co.</strong>
+      <p>Serving Hilliard, Upper Arlington, Dublin, and Plain City</p>
+      <p><a href="tel:+16145357919">(614) 535-7919</a></p>
+    </div>
+    <div>
+      <p>1614 Home LLC</p>
+      <p class="verse">1 Corinthians 16:14</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Pass the visitor's source tag (for example ?src=mailer or ?src=qr) through to the form. Default: web.
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    if(!params.get('src')) params.set('src','web');
+    var f = document.getElementById('JotFormIFrame-262663327317055');
+    f.src = 'https://form.jotform.com/262663327317055?' + params.toString();
+  })();
+</script>
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  window.addEventListener('load', function(){
+    if (window.jotformEmbedHandler) {
+      window.jotformEmbedHandler("iframe[id='JotFormIFrame-262663327317055']", "https://form.jotform.com/");
+    }
+  });
+</script>
+</body>
+</html>
