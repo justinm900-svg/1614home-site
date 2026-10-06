@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSE281RFTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NSE281RFTB');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) {
+      gtag('event', 'phone_click', { link_text: a.textContent.trim() });
+    } else if (href === '#quote') {
+      gtag('event', 'quote_button_click', { link_text: a.textContent.trim() });
+    }
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1614 Home Co. | Quarterly home maintenance in Hilliard, Upper Arlington, Dublin, and Plain City</title>
