@@ -214,7 +214,8 @@
   // Pass the visitor's source tag (for example ?src=mailer or ?src=qr) through to the form. Default: web.
   (function(){
     var params = new URLSearchParams(window.location.search);
-    if(!params.get('src')) params.set('src','web');
+    // If the link carried a utm_source but no src (Google profile, Nextdoor), use the utm_source as src.
+    if(!params.get('src')) params.set('src', params.get('utm_source') || 'web');
     var f = document.getElementById('JotFormIFrame-262663327317055');
     f.src = 'https://form.jotform.com/262663327317055?' + params.toString();
   })();
