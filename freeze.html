@@ -35,6 +35,17 @@
 <meta property="og:image" content="https://1614home.co/img/share-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Service","@id":"https://1614home.co/freeze#service","name":"Fall Freeze Prep visit","serviceType":"Seasonal home maintenance","description":"A one time fall maintenance visit: outside faucets winterized, furnace filter changed, sump pump tested, smoke and CO alarms tested, main water shutoff found and tagged, with a short written note.","provider":{"@type":"HomeAndConstructionBusiness","name":"1614 Home Co.","url":"https://1614home.co/","telephone":"+1-614-585-9814"},"areaServed":[{"@type":"City","name":"Hilliard, OH"},{"@type":"City","name":"Upper Arlington, OH"},{"@type":"City","name":"Dublin, OH"},{"@type":"City","name":"Plain City, OH"}],"offers":{"@type":"Offer","price":"129","priceCurrency":"USD","url":"https://1614home.co/freeze","availability":"https://schema.org/InStock","validFrom":"2026-11-02","validThrough":"2026-11-30"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Will I get a report on the house?","acceptedAnswer":{"@type":"Answer","text":"You get a short written note of what I did and anything worth watching. It is a maintenance visit, not a report on the condition of the house. Nothing is opened up, and nothing is graded."}},
+{"@type":"Question","name":"What if my outside faucet has no inside shutoff?","acceptedAnswer":{"@type":"Answer","text":"Many newer homes in Hilliard, Dublin, and Plain City have frost free faucets with no separate valve. For those, the hose comes off, the line drains, and a cover goes on. A standard faucet with no shutoff gets a cover and a note, since adding a shutoff is a plumber's job."}},
+{"@type":"Question","name":"Do I need to supply a furnace filter?","acceptedAnswer":{"@type":"Answer","text":"Either way works. Text me the size on the edge of your current filter and I will bring one and charge only what it costs me, or leave yours by the furnace."}},
+{"@type":"Question","name":"When is the first hard freeze in central Ohio?","acceptedAnswer":{"@type":"Answer","text":"Most years the Columbus area sees its first night at or below 28 degrees in late October or early November. Visits start Monday, November 2, and go through the end of November."}},
+{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"Card at the end of the visit through Square, or a Square invoice by text or email. $129 flat, plus the filter at cost if I supply it."}}
+]}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -96,6 +107,12 @@
   .form-frame iframe{width:100%;min-height:760px;border:0;display:block}
   .fine{font-size:.9rem;color:var(--muted);max-width:42rem;margin:1.5rem 0 0}
 
+  .faq{background:var(--cream);padding:3.5rem 0}
+  .faq dl{max-width:42rem;margin:1rem 0 0}
+  .faq dt{font:700 1.05rem/1.4 var(--sans);color:var(--navy);margin:1.4rem 0 .3rem}
+  .faq dd{margin:0;color:var(--ink)}
+  footer .areas a{color:#CFD5DC;text-decoration:none;border-bottom:1px solid rgba(207,213,220,.35)}
+  footer .areas a+a{margin-left:.6rem}
   footer{background:var(--navy);color:#CFD5DC;padding:2.75rem 0;font-size:.95rem}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
   footer strong{color:var(--cream);font:700 1.15rem var(--serif);display:block;margin-bottom:.35rem}
@@ -147,8 +164,8 @@
     <div class="wrap">
       <h2 id="visit-h">What the visit covers</h2>
       <ul class="checks">
-        <li>Outside water shut off and hose bibs drained
-          <small>Indoor shutoff valves for outside spigots, closed and opened at the spigot to drain.</small></li>
+        <li>Outside faucets winterized
+          <small>Hoses off, lines drained, the inside shutoff closed where there is one, and an insulated cover on each faucet.</small></li>
         <li>Furnace filter changed
           <small>Use your own filter, or I bring the right size and charge only what it costs me.</small></li>
         <li>Sump pump tested
@@ -185,13 +202,31 @@
       <p class="fine">This is a maintenance visit only. It does not include plumbing, electrical, or HVAC repair. If I find something that needs a licensed trade, I'll tell you and you choose who to call.</p>
     </div>
   </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <h2 id="faq-h">Common questions</h2>
+      <dl>
+        <dt>Will I get a report on the house?</dt>
+        <dd>You get a short written note of what I did and anything worth watching. It is a maintenance visit, not a report on the condition of the house. Nothing is opened up, and nothing is graded.</dd>
+        <dt>What if my outside faucet has no inside shutoff?</dt>
+        <dd>Many newer homes in Hilliard, Dublin, and Plain City have frost free faucets with no separate valve. For those, the hose comes off, the line drains, and a cover goes on. A standard faucet with no shutoff gets a cover and a note, since adding a shutoff is a plumber's job.</dd>
+        <dt>Do I need to supply a furnace filter?</dt>
+        <dd>Either way works. Text me the size on the edge of your current filter and I will bring one and charge only what it costs me, or leave yours by the furnace.</dd>
+        <dt>When is the first hard freeze in central Ohio?</dt>
+        <dd>Most years the Columbus area sees its first night at or below 28 degrees in late October or early November. Visits start Monday, November 2, and go through the end of November.</dd>
+        <dt>How do I pay?</dt>
+        <dd>Card at the end of the visit through Square, or a Square invoice by text or email. $129 flat, plus the filter at cost if I supply it.</dd>
+      </dl>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
     <div>
       <strong>1614 Home Co.</strong>
-      <p>Serving Hilliard, Upper Arlington, Dublin, and Plain City</p>
+      <p class="areas">Serving <a href="/hilliard">Hilliard</a><a href="/upper-arlington">Upper Arlington</a><a href="/dublin">Dublin</a><a href="/plain-city">Plain City</a></p>
       <p><a href="tel:+16145859814">(614) 585-9814</a></p>
       <p><a href="mailto:justin@1614home.com">justin@1614home.com</a></p>
     </div>
