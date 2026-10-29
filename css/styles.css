@@ -22,8 +22,6 @@ a{color:var(--navy)}
 .skip{position:absolute;left:-999px;top:0;background:var(--cream);color:var(--navy);padding:.6rem 1rem;z-index:100;font-weight:700}
 .skip:focus{left:.5rem;top:.5rem}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.ph{background:#FFF3C4;color:#5A4500;padding:0 .2em;border-radius:3px;font-style:normal}
-.on-dark .ph{background:#4B4320;color:#FFE9A3}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:700 1rem/1.2 var(--sans);text-decoration:none;padding:.95rem 1.4rem;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
@@ -191,17 +189,13 @@ section{scroll-margin-top:4.5rem}
 .box .amt{font:400 1.6rem/1 var(--serif);color:var(--navy);margin:.1rem 0 .5rem}
 
 /* about */
-.about-grid{display:grid;gap:2.5rem;align-items:start}
-@media (min-width:860px){.about-grid{grid-template-columns:.75fr 1.25fr}}
-.portrait{aspect-ratio:4/5;border-radius:12px;background:repeating-linear-gradient(45deg,#ECE6D8,#ECE6D8 12px,#E5DECD 12px,#E5DECD 24px);border:2px dashed #C9BFA8;display:grid;place-items:center;text-align:center;color:#6B6150;padding:1.5rem;font-size:.95rem}
-.portrait svg{width:3rem;height:3rem;display:block;margin:0 auto .6rem;color:#A59A82}
+.about-grid{display:block}
+.about{max-width:46rem}
 .about p{margin:0 0 1rem}
 .facts{display:grid;gap:.75rem;margin:1.5rem 0 0;padding:0;list-style:none}
 @media (min-width:600px){.facts{grid-template-columns:1fr 1fr}}
 .facts li{background:#fff;border:1px solid var(--line);border-radius:8px;padding:.85rem 1rem;display:grid;grid-template-columns:1.4rem 1fr;gap:.65rem;font-size:.95rem}
 .facts svg{width:1.25rem;height:1.25rem;color:var(--sage-deep);margin-top:.15rem}
-.testimonial{margin:2rem 0 0;border:2px dashed #C9BFA8;border-radius:10px;padding:1.2rem 1.4rem;background:#FFFDF6;color:var(--muted);font-size:.95rem}
-.testimonial strong{color:var(--ink)}
 
 /* area */
 .area-grid{display:grid;gap:1rem}
@@ -259,6 +253,5 @@ footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
   .hero-card{display:none}
   .steps li{display:grid;grid-template-columns:2.25rem 1fr;column-gap:.75rem;padding:1.1rem}
   .steps .num{grid-row:span 2;font-size:1.9rem;margin:0}
-  .portrait{aspect-ratio:auto;min-height:11rem;max-width:20rem}
   .actions .btn{flex:1 1 100%}
 }
