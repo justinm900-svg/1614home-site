@@ -63,6 +63,12 @@
       if (form.querySelector('[name="Text message consent"]') && !data['Text message consent']) data['Text message consent'] = 'No';
       delete data.botcheck; delete data.redirect;
 
+      // Copy to the Make lead automation (instant reply, Airtable, alert). Fire and forget; never blocks the submit, never sends the access key.
+      try {
+        var hook = Object.assign({}, data); delete hook.access_key;
+        fetch('https://hook.us2.make.com/f8c6mtuv15a5jg1898zknc9ij1oszdlg', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(hook), keepalive: true }).catch(function () {});
+      } catch (x) {}
+
       btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
       status.className = 'f-status'; status.textContent = '';
 
