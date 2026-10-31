@@ -41,13 +41,13 @@ fbq('track', 'PageView');
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quarterly Home Maintenance in Hilliard, Dublin &amp; Upper Arlington | 1614 Home Co.</title>
-<meta name="description" content="Quarterly home maintenance for Hilliard, Upper Arlington, Dublin, and Plain City. One person, four visits a year: filters, leak-sensor wet tests, sump and smoke/CO checks, a seasonal task, and a dated Home Record. Founding Membership from $699 for year one.">
+<meta name="description" content="Quarterly home maintenance for Hilliard, Dublin, Plain City, Upper Arlington, and greater Columbus. One person, four visits a year: filters, leak-sensor wet tests, sump and smoke/CO checks, a seasonal task, and a dated Home Record. Founding Membership from $699 for year one.">
 <meta name="theme-color" content="#0B2239">
 <link rel="canonical" href="https://1614home.co/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="1614 Home Co.">
 <meta property="og:title" content="1614 Home Co. | Keep water where it belongs.">
-<meta property="og:description" content="Quarterly home maintenance for Hilliard, Upper Arlington, Dublin, and Plain City. Four visits a year and a written Home Record. Founding Membership from $699 for year one.">
+<meta property="og:description" content="Quarterly home maintenance for Hilliard, Dublin, Plain City, Upper Arlington, and greater Columbus. Four visits a year and a written Home Record. Founding Membership from $699 for year one.">
 <meta property="og:url" content="https://1614home.co/">
 <meta property="og:image" content="https://1614home.co/img/share-card.png">
 <meta property="og:image:width" content="1200">
@@ -65,6 +65,7 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/forms.css">
 
 <script type="application/ld+json">
 {
@@ -96,7 +97,8 @@ fbq('track', 'PageView');
         {"@type": "City", "name": "Hilliard", "containedInPlace": {"@type": "State", "name": "Ohio"}},
         {"@type": "City", "name": "Upper Arlington", "containedInPlace": {"@type": "State", "name": "Ohio"}},
         {"@type": "City", "name": "Dublin", "containedInPlace": {"@type": "State", "name": "Ohio"}},
-        {"@type": "City", "name": "Plain City", "containedInPlace": {"@type": "State", "name": "Ohio"}}
+        {"@type": "City", "name": "Plain City", "containedInPlace": {"@type": "State", "name": "Ohio"}},
+        {"@type": "City", "name": "Columbus", "containedInPlace": {"@type": "State", "name": "Ohio"}}
       ],
       "founder": {"@type": "Person", "name": "Justin Miller"},
       "makesOffer": [
@@ -184,7 +186,7 @@ fbq('track', 'PageView');
       <div>
         <p class="eyebrow">Hilliard · Upper Arlington · Dublin · Plain City</p>
         <h1 id="hero-h">Keep water where it belongs.</h1>
-        <p class="lede">Quarterly home maintenance for homeowners in Hilliard, Upper Arlington, Dublin, and Plain City. One person who knows your house, four visits a year, and a written Home Record of every one.</p>
+        <p class="lede">Quarterly home maintenance for homeowners in Hilliard, Dublin, Plain City, Upper Arlington, and the greater Columbus area. One person who knows your house, four visits a year, and a written Home Record of every one.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#quote">Get my quote</a>
           <a class="btn btn-ghost" href="tel:+16145859814"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (614) 585-9814</a>
@@ -331,6 +333,19 @@ fbq('track', 'PageView');
   </section>
 
   <!-- HOME RECORD PREVIEW -->
+  <!-- LEAD MAGNET -->
+  <section class="lm" aria-labelledby="lm-h">
+    <div class="wrap lm-inner">
+      <div class="lm-icon" aria-hidden="true"><svg><use href="#i-snow"/></svg></div>
+      <div class="lm-copy">
+        <p class="kicker">Free checklist</p>
+        <h2 id="lm-h">5 Things to Check Before the First Freeze</h2>
+        <p>The short list I'd give a neighbor for a central Ohio house. One page, printable, about an hour of work.</p>
+      </div>
+      <a class="btn btn-solid" href="freeze-checklist">Get the checklist</a>
+    </div>
+  </section>
+
   <section class="sec sec-navy on-dark" id="record" aria-labelledby="rec-h">
     <div class="wrap record-grid">
       <div>
@@ -343,6 +358,7 @@ fbq('track', 'PageView');
           <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Where the main water shutoff is, and whether it turns</span></li>
           <li><svg aria-hidden="true"><use href="#i-tool"/></svg><span>Notes on anything worth watching, or worth calling a licensed trade about</span></li>
         </ul>
+        <p class="record-cta"><a class="btn btn-primary" href="home-record-sample">See a full sample Home Record</a></p>
       </div>
       <div>
         <figure class="record" style="margin:0" aria-label="Example Home Record. Sample data, not a real customer.">
@@ -420,18 +436,39 @@ fbq('track', 'PageView');
   <!-- ABOUT -->
   <section class="sec sec-cream" id="about" aria-labelledby="about-h">
     <div class="wrap about-grid">
-      <!-- A photo of Justin can go here later: img/justin.jpg -->
+      <!-- PHOTO SLOT: when Justin's photo is ready, save it as img/justin.jpg and replace this comment with:
+           <figure class="about-photo"><img src="img/justin.jpg" alt="Justin Miller, owner of 1614 Home Co." width="480" height="600" loading="lazy"></figure> -->
       <div class="about">
-        <p class="kicker">About</p>
+        <p class="kicker">Why 1614</p>
         <h2 id="about-h">Hi, I'm Justin.</h2>
-        <p>1614 Home Co. is based in Hilliard, and so am I. Most of the houses I work on are a short drive from my own. When you join, I'm the person who shows up every visit. I learn your house, and I write down what I find.</p>
-        <p>I'm Justin Miller, and I run 1614 Home Co. (1614 Home LLC). The name comes from 1 Corinthians 16:14: “Let all that you do be done in love.” It also happens to hold 614, the area code we call home. That's how I want to treat your house: carefully and honestly, the way I'd want my own family's home cared for. The work is one person who knows your house: keeping water where it belongs, and catching small problems before they get expensive.</p>
-        <p>It's maintenance only. If something needs a licensed plumber, electrician, or HVAC tech, I'll tell you and you choose who to call. Old or stuck valves get tagged, not forced.</p>
+        <p>I'm Justin Miller. I live in Hilliard, and 1614 Home Co. is me. When you join, you get one person who learns your house, shows up for every visit, and writes down what he finds.</p>
+        <blockquote class="verse-card">
+          <p>&ldquo;Let all that you do be done in love.&rdquo;</p>
+          <cite>1 Corinthians 16:14</cite>
+        </blockquote>
+        <p>That verse is where the name comes from. It happens to have 614 in it too, which fits a Columbus business. It's also how I try to work in your house: do the job carefully, tell you the truth about what I see, and treat the place like my own family lives there.</p>
+        <p>It's maintenance only. If something needs a licensed plumber, electrician, or HVAC tech, I'll tell you, and you pick who to call. Old or stuck valves get tagged, not forced.</p>
         <ul class="facts">
-          <li><svg aria-hidden="true"><use href="#i-home"/></svg><span>Lives in Hilliard and works in Hilliard, Upper Arlington, Dublin, and Plain City</span></li>
+          <li><svg aria-hidden="true"><use href="#i-home"/></svg><span>Lives in Hilliard. Works mostly in Hilliard, Dublin, Plain City, and Upper Arlington, plus the greater Columbus area</span></li>
           <li><svg aria-hidden="true"><use href="#i-user"/></svg><span>Same person every visit, never a rotating crew</span></li>
           <li><svg aria-hidden="true"><use href="#i-tool"/></svg><span>Maintenance only. Tells you plainly when something needs a licensed trade.</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS
+       PLACEHOLDER TESTIMONIALS: replace with real customer quotes, then remove hidden.
+       Do not publish made-up reviews. Every quote below is a [PLACEHOLDER] for layout only. -->
+  <section class="sec" id="reviews" aria-labelledby="rev-h" hidden>
+    <div class="wrap">
+      <p class="kicker">From the neighbors</p>
+      <h2 id="rev-h">What homeowners say</h2>
+      <div class="quote-grid-4">
+        <figure class="tcard"><blockquote><p>[PLACEHOLDER] Justin found our main shutoff behind a basement ceiling tile and tagged it. We had lived here nine years and never knew where it was.</p></blockquote><figcaption><span class="who">[PLACEHOLDER] K.M.</span><span class="where">Hilliard</span></figcaption></figure>
+        <figure class="tcard"><blockquote><p>[PLACEHOLDER] Two furnaces, two water heaters, and I never remember the filters. Now I don't have to. The Home Record has every size written down.</p></blockquote><figcaption><span class="who">[PLACEHOLDER] R.T.</span><span class="where">Dublin</span></figcaption></figure>
+        <figure class="tcard"><blockquote><p>[PLACEHOLDER] He tested the sump pump on his first visit and the float was stuck. Better to find that in October than during a storm.</p></blockquote><figcaption><span class="who">[PLACEHOLDER] A.S.</span><span class="where">Plain City</span></figcaption></figure>
+        <figure class="tcard"><blockquote><p>[PLACEHOLDER] Our house is from the 1950s and has a lot of old valves. He told us which ones to leave alone and which ones a plumber should look at. No pressure, just honest.</p></blockquote><figcaption><span class="who">[PLACEHOLDER] D.L.</span><span class="where">Upper Arlington</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -440,8 +477,8 @@ fbq('track', 'PageView');
   <section class="sec" id="area" aria-labelledby="area-h">
     <div class="wrap">
       <p class="kicker">Service area</p>
-      <h2 id="area-h">Serving northwest Columbus</h2>
-      <p class="intro">Based in Hilliard, serving four communities on the northwest side of Columbus.</p>
+      <h2 id="area-h">Where I work</h2>
+      <p class="intro">Based in Hilliard. Most of my homes are in Hilliard, Dublin, Plain City, and Upper Arlington, and I serve the greater Columbus area too. Not sure if you're in range? Just ask.</p>
       <div class="area-grid">
         <a class="city" href="hilliard"><h3>Hilliard</h3><p>Original furnaces and water heaters in 1990s and 2000s subdivisions, plus sump pumps nobody has tested since move-in.</p><span class="go">Hilliard homes →</span></a>
         <a class="city" href="upper-arlington"><h3>Upper Arlington</h3><p>Older houses with inside faucet shutoffs, decades-old valves, and alarms of mixed ages.</p><span class="go">Upper Arlington homes →</span></a>
@@ -515,11 +552,8 @@ fbq('track', 'PageView');
         </ul>
       </div>
       <div>
-        <div class="form-frame">
-          <iframe id="JotFormIFrame-262663327317055" title="1614 Home Co. quote request" allow="geolocation" scrolling="no" loading="lazy"></iframe>
-          <noscript><p style="padding:1rem">Please <a href="https://form.jotform.com/262663327317055?src=web">open the quote form here</a>.</p></noscript>
-        </div>
-        <p class="form-fallback">Form not loading? <a href="https://form.jotform.com/262663327317055?src=web" target="_blank" rel="noopener">Open the quote form in a new tab</a> or call <a href="tel:+16145859814">(614) 585-9814</a>.</p>
+        <form class="hc-form" data-w3 data-kind="quote" data-subject="Quote request" data-src-default="web" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="qf-title"><input type="hidden" name="access_key" value="7e3711f0-fb4f-4542-b8ab-e22da2160ac4"><input type="hidden" name="subject" value="Quote request from 1614home.co"><input type="hidden" name="from_name" value="1614home.co website"><input type="hidden" name="redirect" value="https://1614home.co/thanks.html"><input type="hidden" name="Source" value="web"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true"><h3 class="f-title" id="qf-title">Home quote request</h3><p class="f-lede">Fields marked <span class="req">*</span> are required. Takes about 2 minutes.</p><p class="f-section">Who should we contact?</p><div class="f-row"><div class="f-field"><label class="f-label" for="q-first">First name <span class="req" aria-hidden="true">*</span></label><input type="text" id="q-first" name="First name" autocomplete="given-name" required></div><div class="f-field"><label class="f-label" for="q-last">Last name <span class="req" aria-hidden="true">*</span></label><input type="text" id="q-last" name="Last name" autocomplete="family-name" required></div></div><div class="f-row"><div class="f-field"><label class="f-label" for="q-phone">Mobile phone <span class="req" aria-hidden="true">*</span></label><input type="tel" id="q-phone" name="Mobile phone" autocomplete="tel" required inputmode="tel" pattern="[0-9()+.\s-]{10,}" title="10-digit phone number"></div><div class="f-field"><label class="f-label" for="q-email">Email <span class="opt">(optional)</span></label><input type="email" id="q-email" name="email" autocomplete="email"></div></div><p class="f-section">The home</p><div class="f-field"><label class="f-label" for="q-addr">Street address <span class="req" aria-hidden="true">*</span></label><input type="text" id="q-addr" name="Street address" autocomplete="address-line1" required aria-describedby="q-addr-h"><span class="f-help" id="q-addr-h">Enter the address of the home you’d like us to review.</span></div><div class="f-row f-3"><div class="f-field"><label class="f-label" for="q-city">City <span class="req" aria-hidden="true">*</span></label><input type="text" id="q-city" name="City" autocomplete="address-level2" required></div><div class="f-field"><label class="f-label" for="q-state">State</label><input type="text" id="q-state" name="State" value="OH" autocomplete="address-level1" maxlength="2"></div><div class="f-field"><label class="f-label" for="q-zip">ZIP <span class="req" aria-hidden="true">*</span></label><input type="text" id="q-zip" name="ZIP" autocomplete="postal-code" required inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit ZIP"></div></div><div class="f-field"><label class="f-label" for="q-unit">Apt, unit, or gate code <span class="opt">(optional)</span></label><input type="text" id="q-unit" name="Apt / unit" autocomplete="address-line2"></div><p class="f-section">About the home</p><div class="f-row f-2m"><div class="f-field"><label class="f-label" for="q-fb">Full bathrooms <span class="req" aria-hidden="true">*</span></label><select id="q-fb" name="Full bathrooms" required aria-describedby="q-fb-h"><option value="" disabled selected>Select</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select><span class="f-help" id="q-fb-h">Tub or shower.</span></div><div class="f-field"><label class="f-label" for="q-hb">Half bathrooms <span class="req" aria-hidden="true">*</span></label><select id="q-hb" name="Half bathrooms" required aria-describedby="q-hb-h"><option value="" disabled selected>Select</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select><span class="f-help" id="q-hb-h">Half baths count.</span></div></div><div class="f-row f-2m"><div class="f-field"><label class="f-label" for="q-hvac">HVAC systems <span class="req" aria-hidden="true">*</span></label><select id="q-hvac" name="HVAC systems" required aria-describedby="q-hvac-h"><option value="" disabled selected>Select</option><option>1</option><option>2</option><option>3</option><option>4+</option></select><span class="f-help" id="q-hvac-h">Separate heating/cooling systems.</span></div><div class="f-field"><label class="f-label" for="q-wh">Water heaters <span class="req" aria-hidden="true">*</span></label><select id="q-wh" name="Water heaters" required aria-describedby="q-wh-h"><option value="" disabled selected>Select</option><option>0</option><option>1</option><option>2</option><option>3+</option></select><span class="f-help" id="q-wh-h">Tank and tankless.</span></div></div><div class="f-field"><label class="f-label" for="q-sqft">Approximate square footage <span class="req" aria-hidden="true">*</span></label><select id="q-sqft" name="Approx. square footage" required aria-describedby="q-sqft-h"><option value="" disabled selected>Select</option><option>Under 2,000 sq. ft.</option><option>2,000 to 2,999 sq. ft.</option><option>3,000 to 3,999 sq. ft.</option><option>4,000 to 4,999 sq. ft.</option><option>5,000 to 5,999 sq. ft.</option><option>6,000+ sq. ft.</option><option>Not sure</option></select><span class="f-help" id="q-sqft-h">An estimate is fine.</span></div><fieldset><legend>Does the home have a sump pump? <span class="req" aria-hidden="true">*</span></legend><div class="choices"><label class="choice"><input type="radio" name="Sump pump" value="Yes" required><span>Yes</span></label><label class="choice"><input type="radio" name="Sump pump" value="No"><span>No</span></label><label class="choice"><input type="radio" name="Sump pump" value="Not sure"><span>Not sure</span></label></div></fieldset><fieldset><legend>How would you like Justin to follow up? <span class="req" aria-hidden="true">*</span></legend><div class="choices"><label class="choice"><input type="radio" name="Preferred contact" value="Call" required><span>Call</span></label><label class="choice"><input type="radio" name="Preferred contact" value="Text"><span>Text</span></label><label class="choice"><input type="radio" name="Preferred contact" value="Either"><span>Either</span></label></div></fieldset><fieldset><legend>How did you hear about us? <span class="req" aria-hidden="true">*</span></legend><div class="choices"><label class="choice"><input type="radio" name="Heard about us" value="Mailer" required><span>Mailer</span></label><label class="choice"><input type="radio" name="Heard about us" value="Neighbor or referral"><span>Neighbor or referral</span></label><label class="choice"><input type="radio" name="Heard about us" value="Realtor or loan officer"><span>Realtor or loan officer</span></label><label class="choice"><input type="radio" name="Heard about us" value="Nextdoor"><span>Nextdoor</span></label><label class="choice"><input type="radio" name="Heard about us" value="Facebook"><span>Facebook</span></label><label class="choice"><input type="radio" name="Heard about us" value="Other"><span>Other</span></label></div></fieldset><div data-show-when="Heard about us=Neighbor or referral|Realtor or loan officer|Other" hidden><div class="f-field"><label class="f-label" for="q-heard">Who or where? <span class="opt">(optional)</span></label><input type="text" id="q-heard" name="Heard about us (details)"></div></div><details class="f-more"><summary><span>A few more details<small>Optional. Helps us plan leak sensors before we call.</small></span></summary><div class="f-more-body"><fieldset><legend>Dishwasher <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="radio" name="Dishwasher" value="Yes"><span>Yes</span></label><label class="choice"><input type="radio" name="Dishwasher" value="No"><span>No</span></label><label class="choice"><input type="radio" name="Dishwasher" value="Not sure"><span>Not sure</span></label></div></fieldset><fieldset><legend>Refrigerator water / ice line <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="radio" name="Fridge water/ice line" value="Yes"><span>Yes</span></label><label class="choice"><input type="radio" name="Fridge water/ice line" value="No"><span>No</span></label><label class="choice"><input type="radio" name="Fridge water/ice line" value="Not sure"><span>Not sure</span></label></div></fieldset><div class="f-field"><label class="f-label" for="q-dv">Dual-vanity bathrooms <span class="opt">(optional)</span></label><select id="q-dv" name="Dual-vanity bathrooms" aria-describedby="q-dv-h"><option value="" disabled selected>Select</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4+</option><option>Not sure</option></select><span class="f-help" id="q-dv-h">Bathrooms with two sinks or two vanity areas.</span></div><fieldset><legend>Other water-connected areas <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="checkbox" name="Other water-connected areas" value="Wet bar"><span>Wet bar</span></label><label class="choice"><input type="checkbox" name="Other water-connected areas" value="Water softener"><span>Water softener</span></label><label class="choice"><input type="checkbox" name="Other water-connected areas" value="Utility or laundry sink"><span>Utility or laundry sink</span></label><label class="choice"><input type="checkbox" name="Other water-connected areas" value="None of these"><span>None of these</span></label><label class="choice"><input type="checkbox" name="Other water-connected areas" value="Not sure"><span>Not sure</span></label></div><span class="f-help">Select any that apply.</span></fieldset><fieldset><legend>Other home systems <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="checkbox" name="Other home systems" value="Boiler"><span>Boiler</span></label><label class="choice"><input type="checkbox" name="Other home systems" value="Well / pressure tank"><span>Well / pressure tank</span></label><label class="choice"><input type="checkbox" name="Other home systems" value="Ejector pit"><span>Ejector pit</span></label><label class="choice"><input type="checkbox" name="Other home systems" value="Tankless water heater"><span>Tankless water heater</span></label><label class="choice"><input type="checkbox" name="Other home systems" value="None of these"><span>None of these</span></label><label class="choice"><input type="checkbox" name="Other home systems" value="Not sure"><span>Not sure</span></label></div><span class="f-help">Select any that apply.</span></fieldset><fieldset><legend>Pets in the home <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="radio" name="Pets in the home" value="Yes"><span>Yes</span></label><label class="choice"><input type="radio" name="Pets in the home" value="No"><span>No</span></label></div></fieldset><div class="f-field"><label class="f-label" for="q-pets">Pet notes <span class="opt">(optional)</span></label><input type="text" id="q-pets" name="Pet notes" aria-describedby="q-pets-h"><span class="f-help" id="q-pets-h">Anything we should know before entering the home?</span></div><fieldset><legend>Internet access near the sensor hub location <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="radio" name="Wi-Fi near sensor hub" value="Yes"><span>Yes</span></label><label class="choice"><input type="radio" name="Wi-Fi near sensor hub" value="No"><span>No</span></label><label class="choice"><input type="radio" name="Wi-Fi near sensor hub" value="Not sure"><span>Not sure</span></label></div><span class="f-help">The leak-sensor hub needs Wi-Fi or a router connection.</span></fieldset><div class="f-field"><label class="f-label" for="q-notes">Anything else we should know? <span class="opt">(optional)</span></label><textarea id="q-notes" name="Notes" aria-describedby="q-notes-h"></textarea><span class="f-help" id="q-notes-h">Unusual plumbing, mechanical systems, access concerns, or anything else that helps.</span></div></div></details><label class="consent"><input type="checkbox" name="Text message consent" value="Yes"><span>Optional: I agree to receive text messages from 1614 Home Co. about my quote request and service. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not required to request a quote.</span></label><button type="submit" class="f-submit">Send my quote request</button><p class="f-status" role="status" aria-live="polite"></p><p class="f-note">No spam, ever. Your details go only to Justin. <a href="/privacy.html">Privacy</a></p></form>
+        <p class="form-fallback">Prefer to talk? Call or text <a href="tel:+16145859814">(614) 585-9814</a>.</p>
       </div>
     </div>
   </section>
@@ -541,6 +575,7 @@ fbq('track', 'PageView');
           <li><a href="upper-arlington">Upper Arlington</a></li>
           <li><a href="dublin">Dublin</a></li>
           <li><a href="plain-city">Plain City</a></li>
+          <li>Greater Columbus area</li>
         </ul>
       </div>
       <div>
@@ -548,6 +583,8 @@ fbq('track', 'PageView');
         <ul>
           <li><a href="#quote">Request a quote</a></li>
           <li><a href="freeze">Fall Freeze Prep, $129</a></li>
+          <li><a href="freeze-checklist">Free freeze checklist</a></li>
+          <li><a href="home-record-sample">Sample Home Record</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -555,7 +592,7 @@ fbq('track', 'PageView');
     </div>
     <div class="foot-bottom">
       <p>© <span id="yr">2026</span> 1614 Home LLC · <a href="privacy.html">Privacy</a></p>
-      <p class="verse">“Let all that you do be done in love.” — 1 Corinthians 16:14</p>
+      <p class="verse">“Let all that you do be done in love.” 1 Corinthians 16:14</p>
     </div>
   </div>
 </footer>
@@ -567,26 +604,8 @@ fbq('track', 'PageView');
 </div>
 
 <script>
-  // Pass the visitor's source tag (for example ?src=mailer or ?src=qr) through to the form. Default: web.
-  // (Same behavior as the live site.)
-  (function(){
-    var params = new URLSearchParams(window.location.search);
-    if(!params.get('src')) params.set('src', params.get('utm_source') || 'web');
-    var url = 'https://form.jotform.com/262663327317055?' + params.toString();
-    var f = document.getElementById('JotFormIFrame-262663327317055');
-    if (f) f.src = url;
-    var fb = document.querySelector('.form-fallback a[target]');
-    if (fb) fb.href = url;
-    var y = document.getElementById('yr'); if (y) y.textContent = new Date().getFullYear();
-  })();
+  (function(){ var y = document.getElementById('yr'); if (y) y.textContent = new Date().getFullYear(); })();
 </script>
-<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-<script>
-  window.addEventListener('load', function(){
-    if (window.jotformEmbedHandler) {
-      window.jotformEmbedHandler("iframe[id='JotFormIFrame-262663327317055']", "https://form.jotform.com/");
-    }
-  });
-</script>
+<script src="js/forms.js" defer></script>
 </body>
 </html>

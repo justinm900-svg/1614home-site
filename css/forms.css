@@ -1,0 +1,64 @@
+/* 1614 Home Co. native request forms (Web3Forms backend) */
+.hc-form{--f-navy:#0B2239;--f-navy-3:#1C3D5E;--f-cream:#F5F1E8;--f-paper:#FBF9F4;--f-line:#D9D2C2;--f-sage:#AAB89C;--f-sage-deep:#5E6E52;--f-sage-soft:#E7ECE1;--f-ink:#1C2733;--f-muted:#56606B;--f-err:#A23B2A;
+  background:#fff;color:var(--f-ink);border-radius:12px;padding:clamp(1.25rem,4vw,2rem);box-shadow:0 1px 2px rgba(11,34,57,.06),0 12px 32px rgba(11,34,57,.12);border:1px solid #E3DDCF;font-size:1rem;line-height:1.5;text-align:left}
+.hc-form *{box-sizing:border-box}
+.hc-form .f-title{font:400 1.45rem/1.2 "Libre Caslon Text",Georgia,serif;color:var(--f-navy);margin:0 0 .3rem}
+.hc-form .f-lede{color:var(--f-muted);margin:0 0 1.25rem;font-size:.95rem}
+.hc-form fieldset{border:0;margin:0 0 1.1rem;padding:0;min-width:0}
+.hc-form legend,.hc-form .f-label{display:block;font-weight:700;color:var(--f-navy);font-size:.95rem;margin:0 0 .35rem;padding:0}
+.hc-form .f-section{font:700 .78rem/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--f-sage-deep);margin:1.5rem 0 .9rem;padding-top:1.1rem;border-top:1px solid #ECE6D8}
+.hc-form .f-section:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.hc-form .req{color:var(--f-err);font-weight:700}
+.hc-form .opt{color:var(--f-muted);font-weight:400;font-size:.85rem}
+.hc-form .f-help{display:block;color:var(--f-muted);font-size:.85rem;margin:.3rem 0 0}
+.hc-form .f-row{display:grid;gap:.9rem;grid-template-columns:1fr 1fr;margin:0 0 1rem}
+.hc-form .f-row.f-3{grid-template-columns:2fr 1fr 1fr}
+.hc-form .f-field{margin:0 0 1rem;min-width:0}
+.hc-form .f-row .f-field{margin:0}
+.hc-form input[type=text],.hc-form input[type=tel],.hc-form input[type=email],.hc-form select,.hc-form textarea{
+  width:100%;font:inherit;font-size:16px;color:var(--f-ink);background:var(--f-paper);border:1.5px solid var(--f-line);border-radius:8px;padding:.75rem .85rem;min-height:3rem;transition:border-color .15s,box-shadow .15s,background .15s;-webkit-appearance:none;appearance:none}
+.hc-form select{background-image:linear-gradient(45deg,transparent 50%,var(--f-navy) 50%),linear-gradient(135deg,var(--f-navy) 50%,transparent 50%);background-position:calc(100% - 1.15rem) 1.3rem,calc(100% - .8rem) 1.3rem;background-size:.35rem .35rem;background-repeat:no-repeat;padding-right:2.2rem}
+.hc-form textarea{min-height:6.5rem;resize:vertical}
+.hc-form input:focus,.hc-form select:focus,.hc-form textarea:focus{outline:none;border-color:var(--f-navy);background:#fff;box-shadow:0 0 0 3px rgba(170,184,156,.55)}
+.hc-form .was-validated :invalid{border-color:var(--f-err)}
+.hc-form .choices{display:flex;flex-wrap:wrap;gap:.5rem}
+.hc-form .choice{position:relative;display:inline-flex}
+.hc-form .choice input{position:absolute;opacity:0;width:1px;height:1px}
+.hc-form .choice span{display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:.55rem .95rem;border:1.5px solid var(--f-line);border-radius:999px;background:var(--f-paper);cursor:pointer;font-size:.95rem;color:var(--f-ink);transition:background .15s,border-color .15s,color .15s;user-select:none}
+.hc-form .choice span::before{content:"";width:.95rem;height:.95rem;border:1.5px solid #A79F8E;border-radius:50%;background:#fff;flex:none}
+.hc-form .choice input[type=checkbox]+span::before{border-radius:3px}
+.hc-form .choice input:checked+span{background:var(--f-navy);border-color:var(--f-navy);color:var(--f-cream)}
+.hc-form .choice input:checked+span::before{border-color:var(--f-sage);background:var(--f-sage);box-shadow:inset 0 0 0 2px var(--f-navy)}
+.hc-form .choice input:focus-visible+span{outline:3px solid var(--f-sage);outline-offset:2px}
+.hc-form .consent{display:flex;gap:.7rem;align-items:flex-start;background:var(--f-sage-soft);border-radius:8px;padding:.85rem .95rem;font-size:.85rem;color:var(--f-ink);margin:0 0 1.1rem;cursor:pointer}
+.hc-form .consent input{width:1.15rem;height:1.15rem;margin:.1rem 0 0;flex:none;accent-color:var(--f-navy)}
+.hc-form details.f-more{border:1.5px dashed var(--f-line);border-radius:10px;padding:0 1rem;margin:.5rem 0 1.25rem;background:#FDFCF9}
+.hc-form details.f-more>summary{cursor:pointer;list-style:none;padding:1rem 0;font-weight:700;color:var(--f-navy);display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.hc-form details.f-more>summary::-webkit-details-marker{display:none}
+.hc-form details.f-more>summary::after{content:"+";font:400 1.5rem/1 system-ui,sans-serif;color:var(--f-sage-deep)}
+.hc-form details.f-more[open]>summary::after{content:"\2212"}
+.hc-form details.f-more>summary small{display:block;font-weight:400;color:var(--f-muted);font-size:.85rem}
+.hc-form details.f-more .f-more-body{padding:0 0 .5rem}
+.hc-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.hc-form .f-submit{display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;font:700 1.05rem/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--f-navy);color:var(--f-cream);border:0;border-radius:8px;padding:1rem 1.4rem;min-height:3.25rem;cursor:pointer;transition:background .15s}
+.hc-form .f-submit:hover{background:var(--f-navy-3)}
+.hc-form .f-submit:focus-visible{outline:3px solid var(--f-sage);outline-offset:3px}
+.hc-form .f-submit[disabled]{opacity:.7;cursor:progress}
+.hc-form .f-note{font-size:.8rem;color:var(--f-muted);margin:.8rem 0 0;text-align:center}
+.hc-form .f-note a{color:var(--f-navy)}
+.hc-form .f-status{margin:.9rem 0 0;font-size:.95rem;border-radius:8px}
+.hc-form .f-status:empty{display:none}
+.hc-form .f-status.err{background:#FBEDEA;color:var(--f-err);padding:.8rem .95rem}
+.hc-form .f-status.err a{color:inherit;font-weight:700}
+.hc-form .f-success{text-align:center;padding:1.5rem .5rem}
+.hc-form .f-success h3{font:400 1.6rem/1.2 "Libre Caslon Text",Georgia,serif;color:var(--f-navy);margin:.5rem 0}
+.hc-form .f-success p{color:var(--f-muted);margin:0 0 .5rem}
+.hc-form .f-check{width:3rem;height:3rem;border-radius:50%;background:var(--f-sage-soft);display:inline-flex;align-items:center;justify-content:center;color:var(--f-sage-deep);font-size:1.5rem}
+@media (max-width:560px){
+  .hc-form .f-row,.hc-form .f-row.f-3{grid-template-columns:1fr}
+  .hc-form .f-row.f-2m{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .hc-form .f-row.f-3{grid-template-columns:1fr 1fr}
+  .hc-form .f-row.f-3>.f-field:first-child{grid-column:1/-1}
+}

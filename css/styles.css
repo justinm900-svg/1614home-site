@@ -254,3 +254,32 @@ footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
   .steps .num{grid-row:span 2;font-size:1.9rem;margin:0}
   .actions .btn{flex:1 1 100%}
 }
+
+/* ---- added: about verse, testimonials, lead magnet, record link ---- */
+[hidden]{display:none!important}
+.verse-card{margin:1.5rem 0;padding:1.25rem 1.5rem;background:#fff;border-left:4px solid var(--sage);border-radius:0 var(--radius) var(--radius) 0;box-shadow:var(--shadow)}
+.verse-card p{font:400 1.35rem/1.35 var(--serif);font-style:italic;color:var(--navy);margin:0 0 .4rem}
+.verse-card cite{font:700 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);font-style:normal}
+.about-photo{margin:0 0 1.5rem}
+.about-photo img{width:100%;max-width:22rem;height:auto;border-radius:var(--radius);box-shadow:var(--shadow);display:block}
+@media (min-width:900px){.about-grid:has(.about-photo){display:grid;grid-template-columns:20rem 1fr;gap:3rem;align-items:start}}
+.quote-grid-4{display:grid;gap:1rem}
+@media (min-width:700px){.quote-grid-4{grid-template-columns:1fr 1fr}}
+@media (min-width:1060px){.quote-grid-4{grid-template-columns:repeat(4,1fr)}}
+.tcard{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;position:relative}
+.tcard::before{content:"\201C";position:absolute;top:.3rem;right:1rem;font:400 3.5rem/1 var(--serif);color:var(--sage-soft)}
+.tcard blockquote{margin:0}
+.tcard blockquote p{margin:0;color:var(--ink);font-size:1rem}
+.tcard figcaption{display:flex;flex-direction:column;gap:.15rem;border-top:1px solid var(--line);padding-top:.8rem;font-size:.9rem}
+.tcard .who{font-weight:700;color:var(--navy)}
+.tcard .where{color:var(--sage-deep)}
+.lm{background:var(--sage-soft);border-top:1px solid #D5DDCB;border-bottom:1px solid #D5DDCB}
+.lm-inner{display:grid;gap:1.25rem;align-items:center;padding-top:2.25rem;padding-bottom:2.25rem}
+@media (min-width:760px){.lm-inner{grid-template-columns:auto 1fr auto;gap:1.75rem}}
+.lm-icon{width:3.5rem;height:3.5rem;border-radius:50%;background:var(--navy);color:var(--cream);display:flex;align-items:center;justify-content:center}
+.lm-icon svg{width:1.6rem;height:1.6rem}
+.lm h2{font:400 clamp(1.45rem,2.8vw,1.9rem)/1.2 var(--serif);color:var(--navy);margin:0 0 .35rem}
+.lm p{margin:0;color:var(--muted)}
+.lm .kicker{margin-bottom:.35rem}
+.lm .btn{justify-self:start}
+.record-cta{margin:1.75rem 0 0}
