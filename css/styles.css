@@ -263,16 +263,6 @@ footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
 .about-photo{margin:0 0 1.5rem}
 .about-photo img{width:100%;max-width:22rem;height:auto;border-radius:var(--radius);box-shadow:var(--shadow);display:block}
 @media (min-width:900px){.about-grid:has(.about-photo){display:grid;grid-template-columns:20rem 1fr;gap:3rem;align-items:start}}
-.quote-grid-4{display:grid;gap:1rem}
-@media (min-width:700px){.quote-grid-4{grid-template-columns:1fr 1fr}}
-@media (min-width:1060px){.quote-grid-4{grid-template-columns:repeat(4,1fr)}}
-.tcard{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;position:relative}
-.tcard::before{content:"\201C";position:absolute;top:.3rem;right:1rem;font:400 3.5rem/1 var(--serif);color:var(--sage-soft)}
-.tcard blockquote{margin:0}
-.tcard blockquote p{margin:0;color:var(--ink);font-size:1rem}
-.tcard figcaption{display:flex;flex-direction:column;gap:.15rem;border-top:1px solid var(--line);padding-top:.8rem;font-size:.9rem}
-.tcard .who{font-weight:700;color:var(--navy)}
-.tcard .where{color:var(--sage-deep)}
 .lm{background:var(--sage-soft);border-top:1px solid #D5DDCB;border-bottom:1px solid #D5DDCB}
 .lm-inner{display:grid;gap:1.25rem;align-items:center;padding-top:2.25rem;padding-bottom:2.25rem}
 @media (min-width:760px){.lm-inner{grid-template-columns:auto 1fr auto;gap:1.75rem}}
