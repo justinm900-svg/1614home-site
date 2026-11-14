@@ -27,7 +27,14 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<script>fbq('track', 'Lead');</script>
+<script>
+  (function () {
+    var type = '';
+    try { type = new URLSearchParams(window.location.search).get('type') || ''; } catch (e) {}
+    if (type) fbq('track', 'Lead', { content_name: type });
+    else fbq('track', 'Lead');
+  })();
+</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">

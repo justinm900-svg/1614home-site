@@ -10,7 +10,9 @@
     if (src) {
       var dflt = form.getAttribute('data-src-default') || 'web';
       var s = params.get('src') || params.get('utm_source');
-      src.value = s ? (form.getAttribute('data-kind') === 'freeze' && !params.get('src') ? s + '_freeze' : s) : dflt;
+      var kind = form.getAttribute('data-kind');
+      var seasonal = kind === 'freeze' || kind === 'winter';
+      src.value = s ? (seasonal && !params.get('src') ? s + '_' + kind : s) : dflt;
     }
     // Show "where did you hear" detail only when relevant
     var heardOther = form.querySelector('[data-show-when]');
@@ -61,6 +63,7 @@
       var city = val(form, 'City');
       data.subject = (form.getAttribute('data-subject') || 'Website request') + ': ' + name + (city ? ' (' + city + ')' : '');
       if (form.querySelector('[name="Text message consent"]') && !data['Text message consent']) data['Text message consent'] = 'No';
+      if (form.getAttribute('data-kind') === 'winter') data.type = 'winter';
       delete data.botcheck; delete data.redirect;
 
       // Copy to the Make lead automation (instant reply, Airtable, alert). Fire and forget; never blocks the submit, never sends the access key.
@@ -87,7 +90,8 @@
               document.dispatchEvent(new CustomEvent('hc:unlocked', { detail: reveal }));
               return;
             }
-            window.location.href = '/thanks.html' + (form.getAttribute('data-kind') === 'freeze' ? '?type=freeze' : '');
+            var doneKind = form.getAttribute('data-kind');
+            window.location.href = '/thanks.html' + (doneKind === 'freeze' || doneKind === 'winter' ? '?type=' + doneKind : '');
           } else { throw new Error(res.j && res.j.message || 'error'); }
         })
         .catch(function () {

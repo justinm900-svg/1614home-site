@@ -13,7 +13,7 @@
     var href = a.getAttribute('href') || '';
     if (href.indexOf('tel:') === 0 || href.indexOf('sms:') === 0) {
       gtag('event', 'phone_click', { link_text: a.textContent.trim(), page: 'freeze' });
-    } else if (href === '#request') {
+    } else if (href.indexOf('/winter') === 0) {
       gtag('event', 'quote_button_click', { link_text: a.textContent.trim(), page: 'freeze' });
     }
   });
@@ -38,12 +38,12 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fall Freeze Prep in Columbus, Ohio | 1614 Home Co.</title>
-<meta name="description" content="Fall Freeze Prep anywhere in Columbus for $129. Outside water shut off, filter changed, sump and alarms tested, main shutoff tagged. About 45 minutes.">
+<title>Fall Freeze Prep has wrapped | 1614 Home Co.</title>
+<meta name="description" content="Fall Freeze Prep has wrapped for the season. The Winter Visit is the same $129, credited toward the Founding Membership within 30 days, and books through the end of February.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="1614 Home Co.">
-<meta property="og:title" content="Fall Freeze Prep, $129 | 1614 Home Co.">
-<meta property="og:description" content="Fall Freeze Prep anywhere in Columbus for $129. Outside water shut off, filter changed, sump and alarms tested, main shutoff tagged. About 45 minutes.">
+<meta property="og:title" content="Fall Freeze Prep has wrapped | 1614 Home Co.">
+<meta property="og:description" content="Fall Freeze Prep has wrapped for the season. The Winter Visit is the same $129 and books through the end of February.">
 <meta property="og:url" content="https://1614home.co/freeze">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://1614home.co/freeze">
@@ -53,17 +53,6 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 <meta property="og:image" content="https://1614home.co/img/share-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"Service","@id":"https://1614home.co/freeze#service","name":"Fall Freeze Prep visit","serviceType":"Seasonal home maintenance","description":"A one time fall maintenance visit: outside faucets winterized, furnace filter changed, sump pump tested, smoke and CO alarms tested, main water shutoff found and tagged, with a short written note.","provider":{"@type":"HomeAndConstructionBusiness","name":"1614 Home Co.","url":"https://1614home.co/","telephone":"+1-614-585-9814"},"areaServed":[{"@type":"City","name":"Columbus, OH"},{"@type":"AdministrativeArea","name":"Franklin County, Ohio"},{"@type":"City","name":"Hilliard, OH"},{"@type":"City","name":"Dublin, OH"},{"@type":"City","name":"Plain City, OH"},{"@type":"City","name":"Upper Arlington, OH"}],"offers":{"@type":"Offer","price":"129","priceCurrency":"USD","url":"https://1614home.co/freeze","availability":"https://schema.org/InStock","validFrom":"2026-11-02","validThrough":"2026-11-30"}},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Will I get a report on the house?","acceptedAnswer":{"@type":"Answer","text":"You get a short written note of what I did and anything worth watching. It is a maintenance visit, not a report on the condition of the house. Nothing is opened up, and nothing is graded."}},
-{"@type":"Question","name":"What if my outside faucet has no inside shutoff?","acceptedAnswer":{"@type":"Answer","text":"Many newer homes in Hilliard, Dublin, and Plain City have frost free faucets with no separate valve. For those, the hose comes off, the line drains, and a cover goes on. A standard faucet with no shutoff gets a cover and a note, since adding a shutoff is a plumber's job."}},
-{"@type":"Question","name":"Do I need to supply a furnace filter?","acceptedAnswer":{"@type":"Answer","text":"Either way works. Text me the size on the edge of your current filter and I will bring one and charge only what it costs me, or leave yours by the furnace."}},
-{"@type":"Question","name":"When is the first hard freeze in central Ohio?","acceptedAnswer":{"@type":"Answer","text":"Most years the Columbus area sees its first night at or below 28 degrees in late October or early November. I'm still booking visits through the end of November."}},
-{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"Card at the end of the visit through Square, or a Square invoice by text or email. $129 flat, plus the filter at cost if I supply it."}}
-]}]}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -75,76 +64,43 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
     --sans:"Lato", "Helvetica Neue", Arial, sans-serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
   body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
   a{color:inherit}
   :focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:2px}
   .wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
-
-  .bar{background:var(--navy);color:var(--cream)}
+  .bar{background:var(--navy);color:var(--cream);position:sticky;top:0;z-index:50}
   .bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:4.25rem;gap:1rem}
   .mark{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;font-family:"Jost",var(--sans)}
   .m-num{font-weight:400;font-size:1.55rem;letter-spacing:.06em;line-height:1}
   .m-sep{width:1px;height:1.3rem;background:rgba(245,241,232,.45)}
   .m-name{font-weight:400;font-size:.78rem;letter-spacing:.3em}
   .bar-call{font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(245,241,232,.35);padding-bottom:2px}
-
-  .hero{background:var(--navy);color:var(--cream);padding:3.75rem 0 0;overflow:hidden}
+  .hero{background:var(--navy);color:var(--cream);padding:3.75rem 0 4.5rem}
   .eyebrow{font:700 .8rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin:0 0 1rem}
-  .hero h1{font:400 clamp(2.4rem,6vw,4.25rem)/1.05 var(--serif);margin:0;max-width:14ch;letter-spacing:-.01em}
-  .hero p.lede{font-size:1.15rem;line-height:1.6;max-width:36rem;margin:1.25rem 0 0;color:#E4E0D6}
-  .price-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.25rem;margin:1.75rem 0 0}
-  .price{font:400 2.6rem/1 var(--serif)}
-  .price-sub{color:#C9D1C1;font-size:1rem}
+  .hero h1{font:400 clamp(2.2rem,5.4vw,3.6rem)/1.08 var(--serif);margin:0;max-width:16ch}
+  .hero p.lede{font-size:1.15rem;line-height:1.6;max-width:38rem;margin:1.25rem 0 0;color:#E4E0D6}
+  .hero p.lede a{color:var(--cream);font-weight:700}
   .actions{display:flex;flex-wrap:wrap;gap:.9rem 1.25rem;align-items:center;margin:2rem 0 0}
   .btn{display:inline-block;background:var(--cream);color:var(--navy);font-weight:700;text-decoration:none;padding:.95rem 1.5rem;border-radius:4px}
   .btn:hover{background:#fff}
   .link-quiet{color:var(--cream);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(245,241,232,.4);padding-bottom:2px}
-  .waterline{position:relative;height:5rem;margin-top:3rem}
-  .waterline svg{position:absolute;inset:auto 0 0 0;width:100%;height:100%;display:block}
-
-  section h2{font:400 clamp(1.7rem,3.2vw,2.3rem)/1.15 var(--serif);margin:0 0 .75rem;color:var(--navy)}
-  .visit{padding:4rem 0 3rem}
-  .checks{list-style:none;margin:1.25rem 0 0;padding:0;max-width:42rem}
-  .checks li{padding:.85rem 0 .85rem 2rem;border-bottom:1px solid #DDD6C6;position:relative}
-  .checks li::before{content:"";position:absolute;left:.1rem;top:1.35rem;width:.9rem;height:.45rem;border-left:2px solid var(--sage-deep);border-bottom:2px solid var(--sage-deep);transform:rotate(-45deg)}
-  .checks small{display:block;color:var(--muted);font-size:.93rem}
-  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2.5rem 0 0;max-width:46rem}
-  .facts div{border-top:2px solid var(--navy);padding-top:.75rem}
-  .facts b{display:block;font:700 1.15rem/1.3 var(--serif);color:var(--navy)}
-  .facts span{color:var(--muted);font-size:.95rem}
-
-  .credit{background:var(--cream);padding:3rem 0}
-  .credit p{max-width:42rem;margin:0 0 .9rem}
-  .credit a{font-weight:700}
-
-  .request{padding:4rem 0 3rem}
-  .request .intro{max-width:40rem;color:var(--muted);margin:0 0 1.75rem}
-  .fine{font-size:.9rem;color:var(--muted);max-width:42rem;margin:1.5rem 0 0}
-
-  .faq{background:var(--cream);padding:3.5rem 0}
-  .faq dl{max-width:42rem;margin:1rem 0 0}
-  .faq dt{font:700 1.05rem/1.4 var(--sans);color:var(--navy);margin:1.4rem 0 .3rem}
-  .faq dd{margin:0;color:var(--ink)}
   footer .areas a{color:#CFD5DC;text-decoration:none;border-bottom:1px solid rgba(207,213,220,.35)}
   footer .areas a+a{margin-left:.6rem}
   footer{background:var(--navy);color:#CFD5DC;padding:2.75rem 0;font-size:.95rem}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
   footer strong{color:var(--cream);font:700 1.15rem var(--serif);display:block;margin-bottom:.35rem}
   footer p{margin:.2rem 0}
+  footer a{color:#E4E8EC}
   footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
-
   @media (max-width: 700px){
-    .facts{grid-template-columns:1fr;gap:1rem}
     .hero{padding-top:3rem}
   }
   @media (max-width: 520px){
     .bar-call span{display:none}
+    .wrap{padding:0 1.1rem}
+    .actions .btn{width:100%;text-align:center}
   }
-  .form-wrap{max-width:46rem}
 </style>
-<link rel="stylesheet" href="/css/forms.css">
 </head>
 <body>
 <header class="bar">
@@ -158,82 +114,12 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Fall Freeze Prep</p>
-      <h1>Get the house ready before the first hard freeze.</h1>
-      <p class="lede">A one time visit for homes anywhere in Columbus, from Hilliard and Dublin to Plain City, Upper Arlington, and everywhere in between. I handle the fall checklist most people mean to get to, and I show you where your main water shutoff is.</p>
-      <div class="price-line">
-        <span class="price">$129</span>
-        <span class="price-sub">flat, about 45 minutes. Still booking through the end of November.</span>
-      </div>
+      <h1>Fall Freeze Prep has wrapped for the season.</h1>
+      <p class="lede">That one time fall visit ended November 30. Starting December 1, the same $129 visit is a <a href="/winter">Winter Visit</a>. Join the Founding Membership within 30 days and the $129 still comes off year one. I'm booking Winter Visits through the end of February.</p>
       <div class="actions">
-        <a class="btn" href="#request">Request a visit</a>
+        <a class="btn" href="/winter">See the Winter Visit</a>
         <a class="link-quiet" href="sms:+16145859814">Or text (614) 585-9814</a>
       </div>
-    </div>
-    <div class="waterline" aria-hidden="true">
-      <svg viewBox="0 0 1440 88" preserveAspectRatio="none">
-        <path d="M0 40 C 180 18, 360 62, 540 40 S 900 18, 1080 40 S 1320 60, 1440 38 L1440 88 L0 88 Z" fill="#FBF9F4"/>
-        <path d="M0 40 C 180 18, 360 62, 540 40 S 900 18, 1080 40 S 1320 60, 1440 38" fill="none" stroke="#AAB89C" stroke-width="2"/>
-      </svg>
-    </div>
-  </section>
-
-  <section class="visit" aria-labelledby="visit-h">
-    <div class="wrap">
-      <h2 id="visit-h">What the visit covers</h2>
-      <ul class="checks">
-        <li>Outside faucets winterized
-          <small>Hoses off, lines drained, the inside shutoff closed where there is one, and an insulated cover on each faucet.</small></li>
-        <li>Furnace filter changed
-          <small>Use your own filter, or I bring the right size and charge only what it costs me.</small></li>
-        <li>Sump pump tested
-          <small>Water in the pit, float raised, pump runs and drains.</small></li>
-        <li>Smoke and CO alarms tested
-          <small>Test button on every alarm, with a note on any that are past their replacement date.</small></li>
-        <li>Main water shutoff found and tagged
-          <small>So you, or anyone in the house, can find it fast. Old or stuck valves are tagged, not forced.</small></li>
-        <li>A short written note of what I did and anything worth watching</li>
-      </ul>
-      <div class="facts">
-        <div><b>$129 flat</b><span>Filter at cost if I supply it.</span></div>
-        <div><b>About 45 minutes</b><span>Weekdays and Saturdays.</span></div>
-        <div><b>Same person</b><span>Justin, who lives in Hilliard.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="credit" aria-labelledby="credit-h">
-    <div class="wrap">
-      <h2 id="credit-h">If you want this every season</h2>
-      <p>The 1614 quarterly membership covers four visits a year: filters, sump and alarm checks, a seasonal task each visit, and a running Home Record of your house.</p>
-      <p>Join within 30 days of your freeze prep visit and the $129 comes off your first year. <a href="/">See how the membership works</a>.</p>
-      <p>Rather do it yourself? <a href="/freeze-checklist">Get my free checklist: 5 Things to Check Before the First Freeze</a>.</p>
-    </div>
-  </section>
-
-  <section class="request" id="request" aria-labelledby="req-h">
-    <div class="wrap">
-      <h2 id="req-h">Request a visit</h2>
-      <p class="intro">Takes about a minute. I'll text or call within one business day to set a time.</p>
-      <div class="form-wrap"><form class="hc-form" data-w3 data-kind="freeze" data-subject="Fall Freeze Prep request" data-src-default="freeze_web" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="ff-title"><input type="hidden" name="access_key" value="7e3711f0-fb4f-4542-b8ab-e22da2160ac4"><input type="hidden" name="subject" value="Fall Freeze Prep request from 1614home.co"><input type="hidden" name="from_name" value="1614home.co website"><input type="hidden" name="redirect" value="https://1614home.co/thanks.html"><input type="hidden" name="Source" value="web"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true"><h3 class="f-title" id="ff-title">Fall Freeze Prep request</h3><p class="f-lede">$129 flat. Fields marked <span class="req">*</span> are required.</p><p class="f-section">Your contact info</p><div class="f-row"><div class="f-field"><label class="f-label" for="f-first">First name <span class="req" aria-hidden="true">*</span></label><input type="text" id="f-first" name="First name" autocomplete="given-name" required></div><div class="f-field"><label class="f-label" for="f-last">Last name <span class="req" aria-hidden="true">*</span></label><input type="text" id="f-last" name="Last name" autocomplete="family-name" required></div></div><div class="f-row"><div class="f-field"><label class="f-label" for="f-phone">Mobile phone <span class="req" aria-hidden="true">*</span></label><input type="tel" id="f-phone" name="Mobile phone" autocomplete="tel" required inputmode="tel" pattern="[0-9()+.\s-]{10,}" title="10-digit phone number"></div><div class="f-field"><label class="f-label" for="f-email">Email <span class="opt">(optional)</span></label><input type="email" id="f-email" name="email" autocomplete="email"></div></div><p class="f-section">Service address</p><div class="f-field"><label class="f-label" for="f-addr">Street address <span class="req" aria-hidden="true">*</span></label><input type="text" id="f-addr" name="Street address" autocomplete="address-line1" required aria-describedby="f-addr-h"><span class="f-help" id="f-addr-h">Where should I come for the visit?</span></div><div class="f-row f-3"><div class="f-field"><label class="f-label" for="f-city">City <span class="req" aria-hidden="true">*</span></label><input type="text" id="f-city" name="City" autocomplete="address-level2" required></div><div class="f-field"><label class="f-label" for="f-state">State</label><input type="text" id="f-state" name="State" value="OH" autocomplete="address-level1" maxlength="2"></div><div class="f-field"><label class="f-label" for="f-zip">ZIP <span class="req" aria-hidden="true">*</span></label><input type="text" id="f-zip" name="ZIP" autocomplete="postal-code" required inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit ZIP"></div></div><div class="f-field"><label class="f-label" for="f-unit">Apt, unit, or gate code <span class="opt">(optional)</span></label><input type="text" id="f-unit" name="Apt / unit" autocomplete="address-line2"></div><p class="f-section">Scheduling</p><fieldset><legend>Preferred days <span class="opt">(optional)</span></legend><div class="choices"><label class="choice"><input type="checkbox" name="Preferred days" value="Weekday morning"><span>Weekday morning</span></label><label class="choice"><input type="checkbox" name="Preferred days" value="Weekday afternoon"><span>Weekday afternoon</span></label><label class="choice"><input type="checkbox" name="Preferred days" value="Saturday"><span>Saturday</span></label></div><span class="f-help">Pick any that work.</span></fieldset><div class="f-field"><label class="f-label" for="f-notes">Anything I should know? <span class="opt">(optional)</span></label><textarea id="f-notes" name="Notes" aria-describedby="f-notes-h"></textarea><span class="f-help" id="f-notes-h">Gate codes, pets, filter size, faucets you’re worried about.</span></div><label class="consent"><input type="checkbox" name="Text message consent" value="Yes"><span>Optional: I agree to receive text messages from 1614 Home Co. about my visit. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not required to request a visit.</span></label><button type="submit" class="f-submit">Request my visit</button><p class="f-status" role="status" aria-live="polite"></p><p class="f-note">No spam, ever. Your details go only to Justin. <a href="/privacy">Privacy</a></p></form></div>
-      <p class="fine">This is a maintenance visit only. It does not include plumbing, electrical, or HVAC repair. If I find something that needs a licensed trade, I'll tell you and you choose who to call.</p>
-    </div>
-  </section>
-
-  <section class="faq" aria-labelledby="faq-h">
-    <div class="wrap">
-      <h2 id="faq-h">Common questions</h2>
-      <dl>
-        <dt>Will I get a report on the house?</dt>
-        <dd>You get a short written note of what I did and anything worth watching. It is a maintenance visit, not a report on the condition of the house. Nothing is opened up, and nothing is graded.</dd>
-        <dt>What if my outside faucet has no inside shutoff?</dt>
-        <dd>Many newer homes in Hilliard, Dublin, and Plain City have frost free faucets with no separate valve. For those, the hose comes off, the line drains, and a cover goes on. A standard faucet with no shutoff gets a cover and a note, since adding a shutoff is a plumber's job.</dd>
-        <dt>Do I need to supply a furnace filter?</dt>
-        <dd>Either way works. Text me the size on the edge of your current filter and I will bring one and charge only what it costs me, or leave yours by the furnace.</dd>
-        <dt>When is the first hard freeze in central Ohio?</dt>
-        <dd>Most years the Columbus area sees its first night at or below 28 degrees in late October or early November. I'm still booking visits through the end of November.</dd>
-        <dt>How do I pay?</dt>
-        <dd>Card at the end of the visit through Square, or a Square invoice by text or email. $129 flat, plus the filter at cost if I supply it.</dd>
-      </dl>
     </div>
   </section>
 </main>
@@ -243,6 +129,7 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
     <div>
       <strong>1614 Home Co.</strong>
       <p class="areas">Serving <a href="/columbus">all of Columbus</a>, including<br><a href="/hilliard">Hilliard</a><a href="/dublin">Dublin</a><a href="/plain-city">Plain City</a><a href="/upper-arlington">Upper Arlington</a><a href="/worthington">Worthington</a><a href="/grandview">Grandview Heights</a><a href="/clintonville">Clintonville</a><a href="/bexley">Bexley</a></p>
+      <p class="areas"><a href="/winter">Winter Visit, $129</a></p>
       <p class="areas"><a href="/guides/">Guides for Columbus homeowners</a></p>
       <p class="areas"><a href="/winter-checklist">Free winter checklist</a></p>
       <p><a href="tel:+16145859814">(614) 585-9814</a></p>
@@ -250,11 +137,10 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
     </div>
     <div>
       <p>1614 Home LLC · <a href="/privacy">Privacy</a></p>
+      <p>Justin Miller</p>
       <p class="verse">1 Corinthians 16:14</p>
     </div>
   </div>
 </footer>
-
-<script src="/js/forms.js" defer></script>
 </body>
 </html>
