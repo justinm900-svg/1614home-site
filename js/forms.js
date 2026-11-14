@@ -4,7 +4,82 @@
   var params = new URLSearchParams(window.location.search);
   function val(form, name) { var el = form.elements[name]; return el && el.value ? el.value.trim() : ''; }
 
+  function stepControls(step) {
+    return step.querySelectorAll('input, select, textarea');
+  }
+  function firstInvalid(step) {
+    var nodes = stepControls(step), i, el;
+    for (i = 0; i < nodes.length; i++) {
+      el = nodes[i];
+      if (el.closest('[hidden]')) continue;
+      if (!el.checkValidity()) return el;
+    }
+    return null;
+  }
+  function initSteps(form) {
+    if (!form.hasAttribute('data-steps')) return;
+    var steps = form.querySelectorAll('.f-step');
+    var next = form.querySelector('.f-next');
+    var back = form.querySelector('.f-back');
+    var submit = form.querySelector('.f-submit');
+    var progress = form.querySelector('.f-progress');
+    var status = form.querySelector('.f-status');
+    if (steps.length < 2 || !next || !back) return;
+    var current = 0;
+    form.classList.add('is-stepped');
+
+    function show(i) {
+      current = i;
+      var s;
+      for (s = 0; s < steps.length; s++) steps[s].hidden = s !== i;
+      next.hidden = i !== 0;
+      back.hidden = i === 0;
+      if (submit) submit.hidden = i === 0;
+      form.setAttribute('data-step-current', String(i + 1));
+      if (progress) {
+        progress.hidden = false;
+        progress.textContent = (i === 0) ? 'Step 1 of 2' : 'Step 2 of 2';
+      }
+    }
+    function validate(i) {
+      var bad = firstInvalid(steps[i]);
+      if (bad) {
+        form.classList.add('was-validated');
+        var d = bad.closest('details');
+        if (d) d.open = true;
+        if (status) {
+          status.className = 'f-status err';
+          status.textContent = 'Please fill in the highlighted fields.';
+        }
+        bad.focus();
+        return false;
+      }
+      form.classList.remove('was-validated');
+      if (status) { status.className = 'f-status'; status.textContent = ''; }
+      return true;
+    }
+    form._hcShowInvalid = function (el) {
+      var step = el.closest('.f-step');
+      if (!step) return;
+      var s;
+      for (s = 0; s < steps.length; s++) if (steps[s] === step) show(s);
+    };
+    next.addEventListener('click', function () {
+      if (!validate(current)) return;
+      show(Math.min(current + 1, steps.length - 1));
+      var focusable = steps[current].querySelector('select, input, textarea');
+      if (focusable) focusable.focus();
+    });
+    back.addEventListener('click', function () {
+      show(Math.max(current - 1, 0));
+      var focusable = steps[current].querySelector('input, select, textarea');
+      if (focusable) focusable.focus();
+    });
+    show(0);
+  }
+
   document.querySelectorAll('form.hc-form[data-w3]').forEach(function (form) {
+    initSteps(form);
     // Source tag (?src=mailer, ?utm_source=...) so Justin knows where the lead came from.
     var src = form.elements['Source'];
     if (src) {
@@ -27,11 +102,22 @@
     var btn = form.querySelector('.f-submit');
 
     form.addEventListener('submit', function (e) {
+      if (form.classList.contains('is-stepped') && form.getAttribute('data-step-current') !== '2') {
+        e.preventDefault();
+        var nxt = form.querySelector('.f-next');
+        if (nxt) nxt.click();
+        return;
+      }
       e.preventDefault();
       form.classList.add('was-validated');
       if (!form.checkValidity()) {
         var bad = form.querySelector(':invalid');
-        if (bad) { var d = bad.closest('details'); if (d) d.open = true; bad.focus(); }
+        if (bad) {
+          if (form._hcShowInvalid) form._hcShowInvalid(bad);
+          var d = bad.closest('details');
+          if (d) d.open = true;
+          bad.focus();
+        }
         status.className = 'f-status err';
         status.textContent = 'Please fill in the highlighted fields.';
         return;

@@ -19,6 +19,7 @@
 .ck-thanks{font:400 1.35rem/1.3 var(--serif);color:var(--navy);margin:0}
 .ck-thanks:focus{outline:none}
 .ck-btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.ck-end{display:flex;flex-wrap:wrap;gap:.6rem}
 .ck-sheet{background:#fff;max-width:52rem;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:2.5rem 2.75rem;position:relative;overflow:hidden}
 .ck-sheet::before{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:linear-gradient(90deg,var(--navy),var(--navy) 70%,var(--sage) 70%)}
 @media (max-width:560px){.ck-sheet{padding:1.75rem 1.25rem}}

@@ -27,7 +27,12 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<script>fbq('track', 'Lead');</script>
+<script>
+  (function () {
+    var freeze = /(?:^|[?&])type=freeze(?:&|$)/.test(location.search);
+    fbq('track', 'Lead', {content_name: freeze ? 'freeze' : 'quote'});
+  })();
+</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
@@ -53,16 +58,42 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
   h1{font:400 clamp(1.7rem,5vw,2.3rem)/1.15 var(--serif);margin:0 0 .9rem}
   p{margin:0 0 1.5rem}
   p a{font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(11,34,57,.35);padding-bottom:1px}
+  h2{font:400 1.35rem/1.25 var(--serif);margin:0 0 .7rem}
+  ol{text-align:left;margin:0 auto 1.5rem;padding-left:1.2rem;max-width:24rem}
+  ol li{margin:.4rem 0}
+  .actions{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
   .btn{display:inline-block;background:var(--navy);color:var(--cream);font-weight:700;text-decoration:none;padding:.85rem 1.4rem;border-radius:4px}
   .btn:hover{background:#132F4C}
+  .btn-line{display:inline-block;background:transparent;color:var(--navy);font-weight:700;text-decoration:none;padding:.8rem 1.3rem;border-radius:4px;border:2px solid var(--navy)}
+  .btn-line:hover{background:var(--navy);color:var(--cream)}
+  footer{margin-top:.5rem;font-size:.95rem}
+  footer a{font-weight:700;text-decoration:none;border-bottom:1px solid rgba(11,34,57,.35)}
 </style>
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
-<body>
+<body class="has-mbar">
   <main class="wrap">
     <p class="mark">1614 Home Co.</p>
     <h1>Thanks, we've got it.</h1>
-    <p>Justin will review your home details and follow up within one business day using your preferred contact method. If you need anything sooner, call or text <a href="tel:+16145859814">(614) 585-9814</a>.</p>
-    <a class="btn" href="https://1614home.co/" target="_top">Back to 1614home.co</a>
+    <p>If you need anything sooner, call or text <a href="tel:+16145859814">(614) 585-9814</a>.</p>
+    <h2>What happens next</h2>
+    <ol>
+      <li>Justin will reach out by text or call within one business day.</li>
+      <li>You'll get a simple quote.</li>
+      <li>Then we pick a visit.</li>
+    </ol>
+    <div class="actions">
+      <a class="btn" href="/home-record-sample">See a sample Home Record</a>
+      <a class="btn-line" href="https://1614home.co/" target="_top">Back to 1614home.co</a>
+    </div>
   </main>
+  <footer class="wrap">
+    <p><a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a></p>
+  </footer>
+<div class="mbar" role="region" aria-label="Quick contact">
+  <a href="tel:+16145859814">Call</a>
+  <a href="sms:+16145859814">Text</a>
+  <a class="m-quote" href="/#quote">Get a quote</a>
+</div>
 </body>
 </html>
