@@ -43,8 +43,9 @@ fbq('track', 'PageView');
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/forms.css">
 <link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
-<body>
+<body class="has-mbar">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar on-dark">
   <div class="wrap">
@@ -52,8 +53,21 @@ fbq('track', 'PageView');
     <div class="bar-actions">
       <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
       <a class="btn btn-primary btn-sm" href="/#quote">Get my quote</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-bars" aria-hidden="true"></span></button>
     </div>
   </div>
+  <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li class="nav-call"><a href="tel:+16145859814">Call (614) 585-9814</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#checklist">What I check</a></li>
+        <li><a href="/#seasons">Seasons</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li class="nav-quote"><a href="/#quote">Get my quote</a></li>
+      </ul>
+    </nav>
 </header>
 
 <main id="main" class="ck-page">
@@ -105,7 +119,7 @@ fbq('track', 'PageView');
         <ol class="ck-list"><li class="ck-item"><div class="ck-num" aria-hidden="true">1</div><div class="ck-body"><h3>Outside faucets: hoses off, lines drained</h3><ul><li><span class="ck-box" aria-hidden="true"></span><span>Take every hose off, including on frost free faucets. A frost free faucet only drains when nothing is attached. A hose left on over a cold night is how they split inside the wall, and you won't see the leak until spring.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Older standard faucets: close the shutoff valve inside the house, then open the outside faucet and leave it open for winter so it can drain. If the inside valve has a small drain cap, open it over a bucket.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Put a foam cover on each faucet. They cost a few dollars at any hardware store.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>No inside shutoff? That's common in newer homes. Frost free faucets are fine as long as the hose is off.</span></li></ul></div></li><li class="ck-item"><div class="ck-num" aria-hidden="true">2</div><div class="ck-body"><h3>Sprinklers: water off, lines blown out, backflow drained and covered</h3><ul><li><span class="ck-box" aria-hidden="true"></span><span>Shut off the water supply to the system and set the controller to off.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Have the lines blown out with compressed air. This is usually a job for your sprinkler company, since too much pressure can damage heads and valves.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Look at the backflow valve, the brass assembly usually near the foundation outside. It sits above ground and freezes easily. Make sure it was drained and its valves were left the way your installer recommends, then insulate it.</span></li></ul></div></li><li class="ck-item"><div class="ck-num" aria-hidden="true">3</div><div class="ck-body"><h3>Pipes in cold spots</h3><ul><li><span class="ck-box" aria-hidden="true"></span><span>Walk the garage, crawlspace, unheated rooms, and any sink on an outside wall. Kitchen sinks on exterior walls and bathrooms over a garage are the usual trouble spots.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Put foam pipe insulation on exposed lines and seal drafts where pipes pass through walls and along the basement rim joist.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Keep the garage door closed during cold snaps. If you'll be away, leave the heat at 55°F or higher.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>On the coldest nights, open the cabinet doors under sinks on outside walls and let the faucet drip.</span></li></ul></div></li><li class="ck-item"><div class="ck-num" aria-hidden="true">4</div><div class="ck-body"><h3>Sump pump and its discharge line</h3><ul><li><span class="ck-box" aria-hidden="true"></span><span>Slowly pour a bucket of water into the pit. The pump should turn on, empty the pit, and shut itself off.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Go outside while it runs. Water should come out where it's supposed to and flow away from the house.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Make sure the discharge line isn't crushed, clogged with leaves, or dumping into a low spot where it can freeze solid. An iced over outlet can back water up into the basement.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>If you have a battery backup or a high water alarm, test that too.</span></li></ul></div></li><li class="ck-item"><div class="ck-num" aria-hidden="true">5</div><div class="ck-body"><h3>Find your main water shutoff and make sure it turns</h3><ul><li><span class="ck-box" aria-hidden="true"></span><span>It's usually in the basement or utility room, where the water line comes through the floor or wall near the meter.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Turn it slowly to off, then back on. If it's stuck or the handle feels brittle, don't force it. Call a plumber to look at it.</span></li><li><span class="ck-box" aria-hidden="true"></span><span>Tag it and show everyone in the house where it is. If a pipe ever bursts, this is the valve that saves your floors.</span></li></ul></div></li></ol>
         <div class="ck-also"><h3>While you're at it</h3><p>Change the furnace filter, clean the gutters and point the downspouts away from the house, and test your smoke and CO alarms.</p></div>
         <footer class="ck-sheet-foot">
-          <div><strong>Rather have it done for you?</strong> A Fall Freeze Prep visit is $129 flat, about 45 minutes. <a href="https://1614home.co/freeze">1614home.co/freeze</a></div>
+          <div class="ck-end no-print"><a class="btn btn-solid" href="/#quote">Get my quote</a><a class="btn btn-outline" href="/home-record-sample">See a sample Home Record</a></div>
           <div class="ck-contact">Justin Miller · 1614 Home Co. · (614) 585-9814 · justin@1614home.com</div>
           <p class="ck-fine">General guidance for typical homes. If a valve is stuck, a pipe is leaking, or anything looks wrong, call a licensed plumber.</p>
         </footer>
@@ -117,7 +131,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <p><strong>1614 Home Co.</strong> · Quarterly home maintenance</p>
     <p>Serving <a href="/columbus">all of Columbus</a>, including <a href="/hilliard">Hilliard</a>, <a href="/dublin">Dublin</a>, <a href="/plain-city">Plain City</a>, <a href="/upper-arlington">Upper Arlington</a>, <a href="/worthington">Worthington</a>, <a href="/grandview">Grandview Heights</a>, <a href="/clintonville">Clintonville</a>, <a href="/bexley">Bexley</a>. <a href="/guides/">Guides</a>. <a href="/winter-checklist">Free winter checklist</a></p>
-    <p><a href="tel:+16145859814">(614) 585-9814</a> · <a href="mailto:justin@1614home.com">justin@1614home.com</a> · <a href="/privacy">Privacy</a></p>
+    <p><a href="tel:+16145859814">(614) 585-9814</a> · <a href="mailto:justin@1614home.com">justin@1614home.com</a> · <a href="/privacy">Privacy</a> · <a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a></p>
     <p class="verse">“Let all that you do be done in love.” 1 Corinthians 16:14</p>
   </div>
 </footer>
@@ -135,5 +149,11 @@ fbq('track', 'PageView');
   document.addEventListener('hc:unlocked', function(){ unlock(true); });
 })();
 </script>
+<div class="mbar" role="region" aria-label="Quick contact">
+  <a href="tel:+16145859814">Call</a>
+  <a href="sms:+16145859814">Text</a>
+  <a class="m-quote" href="/#quote">Get a quote</a>
+</div>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>

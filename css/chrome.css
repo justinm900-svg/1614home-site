@@ -1,0 +1,88 @@
+/* Shared mobile header and sticky contact bar. Brand colors match the rest of the site. */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+header.bar{position:sticky;top:0;z-index:50}
+.bar-end{display:flex;align-items:center;gap:.35rem;flex:none}
+
+.nav-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:2.75rem;height:2.75rem;padding:0;margin:0;
+  border:0;border-radius:6px;background:transparent;color:#F5F1E8;cursor:pointer;
+}
+.nav-toggle:hover{background:rgba(245,241,232,.1)}
+.nav-bars,.nav-bars::before,.nav-bars::after{
+  display:block;width:1.15rem;height:2px;background:currentColor;border-radius:1px;position:relative;
+}
+.nav-bars::before,.nav-bars::after{content:"";position:absolute;left:0}
+.nav-bars::before{top:-6px}
+.nav-bars::after{top:6px}
+.nav-toggle[aria-expanded="true"] .nav-bars{background:transparent}
+@media (max-width:349px){
+  header.bar .bar-call{display:none}
+}
+.nav-toggle[aria-expanded="true"] .nav-bars::before{top:0;transform:rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nav-bars::after{top:0;transform:rotate(-45deg)}
+
+.nav{display:none}
+header.bar.is-open .nav{
+  display:block;position:absolute;left:0;right:0;top:100%;
+  background:#0B2239;color:#F5F1E8;
+  padding:.35rem 1.25rem 1rem;
+  border-bottom:1px solid rgba(245,241,232,.14);
+  box-shadow:0 16px 28px rgba(0,0,0,.22);
+  max-height:calc(100vh - 4.5rem);overflow:auto;
+}
+header.bar.is-open .nav ul{list-style:none;margin:0;padding:0;display:grid}
+header.bar.is-open .nav a{
+  display:block;padding:.9rem 0;color:#F5F1E8;text-decoration:none;font-weight:700;
+  border-bottom:1px solid rgba(245,241,232,.12);
+}
+header.bar.is-open .nav .nav-quote a{
+  color:#0B2239;background:#F5F1E8;border:0;border-radius:6px;text-align:center;margin-top:.85rem;padding:.85rem 1rem;
+}
+
+@media (min-width:1060px){
+  .nav-toggle{display:none}
+  header.bar .nav.nav-desktop,
+  header.bar.is-open .nav.nav-desktop{
+    display:block;position:static;background:none;color:inherit;
+    padding:0;border:0;box-shadow:none;max-height:none;overflow:visible;
+  }
+  header.bar .nav.nav-desktop ul{list-style:none;margin:0;padding:0;display:flex;gap:1.5rem}
+  header.bar .nav.nav-desktop a{
+    display:inline;padding:0;border:0;background:none;color:#DCE2E8;
+    font-weight:400;font-size:.95rem;text-align:left;
+  }
+  header.bar .nav.nav-desktop a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+  header.bar .nav.nav-desktop .nav-quote,
+  header.bar .nav.nav-desktop .nav-call{display:none}
+  header.bar:has(.nav-desktop) .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  header.bar:has(.nav-desktop) .mark{order:1}
+  header.bar:has(.nav-desktop) .nav.nav-desktop{order:2}
+  header.bar:has(.nav-desktop) .bar-actions{order:3}
+}
+
+/* Sticky Call / Text / Quote bar */
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(11,34,57,.97);
+  display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:.45rem;
+  padding:.55rem .65rem calc(.55rem + env(safe-area-inset-bottom));
+  border-top:1px solid rgba(245,241,232,.15);
+}
+.mbar a{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  text-decoration:none;font-weight:700;font-size:.92rem;line-height:1.2;
+  min-height:2.75rem;padding:.65rem .35rem;border-radius:6px;
+  border:2px solid rgba(245,241,232,.55);color:#F5F1E8;background:transparent;
+}
+.mbar a.m-quote{background:#F5F1E8;color:#0B2239;border-color:transparent}
+.mbar a:hover{background:rgba(245,241,232,.08)}
+.mbar a.m-quote:hover{background:#fff}
+@media (min-width:860px){.mbar{display:none}}
+@media (max-width:859px){
+  body.has-mbar{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom))}
+}
+@media print{
+  .mbar,.nav-toggle{display:none!important}
+  body.has-mbar{padding-bottom:0!important}
+}
