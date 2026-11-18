@@ -84,13 +84,29 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
     .bar-call span{display:none}
   }
 </style>
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
 <body>
 <header class="bar">
   <div class="wrap">
     <a class="mark" href="/" aria-label="1614 Home Co. home"><span class="m-num">1614</span><span class="m-sep" aria-hidden="true"></span><span class="m-name">HOME CO.</span></a>
-    <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
+    <div class="bar-end">
+      <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-bars" aria-hidden="true"></span></button>
+    </div>
   </div>
+  <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li class="nav-call"><a href="tel:+16145859814">Call (614) 585-9814</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#checklist">What I check</a></li>
+        <li><a href="/#seasons">Seasons</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li class="nav-quote"><a href="/#quote">Get my quote</a></li>
+      </ul>
+    </nav>
 </header>
 
 <main class="policy">
@@ -152,10 +168,11 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
       <p><a href="mailto:justin@1614home.com">justin@1614home.com</a></p>
     </div>
     <div>
-      <p>1614 Home LLC · <a href="/privacy">Privacy</a></p>
+      <p>1614 Home LLC · <a href="/privacy">Privacy</a> · <a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a></p>
       <p class="verse">1 Corinthians 16:14</p>
     </div>
   </div>
 </footer>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>

@@ -43,7 +43,6 @@ a{color:var(--navy)}
 .m-num{font-weight:400;font-size:1.55rem;letter-spacing:.06em;line-height:1}
 .m-sep{width:1px;height:1.3rem;background:rgba(245,241,232,.45)}
 .m-name{font-weight:400;font-size:.74rem;letter-spacing:.3em}
-.nav{display:none}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.5rem}
 .nav a{color:#DCE2E8;text-decoration:none;font-size:.95rem}
 .nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
@@ -53,7 +52,6 @@ a{color:var(--navy)}
 .bar .btn-sm{display:none}
 @media (min-width:600px){.bar-call span{display:inline}}
 @media (min-width:860px){.bar .btn-sm{display:inline-flex}}
-@media (min-width:1060px){.nav{display:block}}
 
 /* hero */
 .hero{background:var(--navy);color:var(--cream);padding:3.25rem 0 0;overflow:hidden;position:relative}
@@ -230,8 +228,7 @@ section{scroll-margin-top:4.5rem}
 .form-fallback a{color:var(--cream)}
 
 /* footer */
-footer{background:#071827;color:#CFD5DC;padding:3rem 0 6.5rem;font-size:.95rem}
-@media (min-width:860px){footer{padding-bottom:2rem}}
+footer{background:#071827;color:#CFD5DC;padding:3rem 0 2rem;font-size:.95rem}
 .foot-grid{display:grid;gap:2rem}
 @media (min-width:760px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
 footer h2{font:700 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin:0 0 .9rem}
@@ -240,11 +237,6 @@ footer a{color:#E4E8EC}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
 footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
 .foot-bottom{margin-top:2.25rem;padding-top:1.25rem;border-top:1px solid rgba(207,213,220,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;font-size:.88rem}
-
-/* sticky mobile CTA */
-.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(11,34,57,.97);backdrop-filter:blur(6px);display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));border-top:1px solid rgba(245,241,232,.15)}
-.mbar .btn{padding:.8rem .5rem}
-@media (min-width:860px){.mbar{display:none}}
 
 /* small-screen tightening */
 @media (max-width:599px){

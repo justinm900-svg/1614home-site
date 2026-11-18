@@ -11,13 +11,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
 <!-- Root-absolute paths on purpose: a 404 can be served at any URL depth. -->
 <link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
 <body style="padding-bottom:0">
 <header class="bar on-dark">
   <div class="wrap">
     <a class="mark" href="/" aria-label="1614 Home Co. home"><span class="m-num">1614</span><span class="m-sep" aria-hidden="true"></span><span class="m-name">HOME CO.</span></a>
-    <div class="bar-actions"><a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a></div>
+    <div class="bar-actions"><a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-bars" aria-hidden="true"></span></button></div>
   </div>
+  <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li class="nav-call"><a href="tel:+16145859814">Call (614) 585-9814</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#checklist">What I check</a></li>
+        <li><a href="/#seasons">Seasons</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li class="nav-quote"><a href="/#quote">Get my quote</a></li>
+      </ul>
+    </nav>
 </header>
 <main class="hero on-dark" style="padding-bottom:5rem;min-height:70vh">
   <div class="wrap">
@@ -31,5 +44,11 @@
     </div>
   </div>
 </main>
+<footer class="on-dark">
+  <div class="wrap">
+    <p><a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a> · <a href="/privacy">Privacy</a></p>
+  </div>
+</footer>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>

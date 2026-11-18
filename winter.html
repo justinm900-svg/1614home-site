@@ -91,14 +91,6 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
   .m-sep{width:1px;height:1.3rem;background:rgba(245,241,232,.45)}
   .m-name{font-weight:400;font-size:.78rem;letter-spacing:.3em}
   .bar-call{font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(245,241,232,.35);padding-bottom:2px}
-  .menu-btn{background:transparent;color:var(--cream);border:1px solid rgba(245,241,232,.45);font:700 .95rem/1 var(--sans);padding:.7rem .9rem;border-radius:4px;cursor:pointer;min-height:2.75rem}
-  .menu-btn:hover{border-color:var(--cream)}
-  .nav{display:none;flex:1 0 100%;order:5}
-  .nav.is-open{display:block}
-  .nav ul{list-style:none;margin:0;padding:0 0 .9rem}
-  .nav li+li{border-top:1px solid rgba(245,241,232,.15)}
-  .nav a{color:var(--cream);text-decoration:none;font-weight:700;display:block;padding:.7rem 0}
-  .nav a:hover{color:#fff}
 
   .hero{background:var(--navy);color:var(--cream);padding:3.75rem 0 0;overflow:hidden}
   .eyebrow{font:700 .8rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin:0 0 1rem}
@@ -147,23 +139,10 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
   footer a{color:#E4E8EC}
   footer .verse{font-family:var(--serif);font-style:italic;color:var(--sage)}
 
-  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));border-top:1px solid rgba(245,241,232,.15)}
-  .mbar .btn-ghost{background:transparent;color:var(--cream);border:2px solid rgba(245,241,232,.55)}
-
   @media (max-width: 859px){
-    body{padding-bottom:4.75rem}
-    .bar-call{display:none}
     .hero{padding-top:2.4rem}
     .hero p.lede{margin-top:1rem}
     .price-line{margin-top:1.2rem}
-  }
-  @media (min-width: 860px){
-    .menu-btn{display:none}
-    .nav{display:block;flex:0 1 auto;order:0}
-    .nav ul{display:flex;gap:1.15rem;padding:0}
-    .nav li+li{border-top:0}
-    .nav a{padding:0;border-bottom:1px solid transparent}
-    .mbar{display:none}
   }
   @media (max-width: 700px){
     .facts{grid-template-columns:1fr;gap:1rem}
@@ -176,23 +155,30 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
   .form-wrap{max-width:46rem}
 </style>
 <link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
-<body>
+<body class="has-mbar">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <div class="wrap">
     <a class="mark" href="/" aria-label="1614 Home Co. home"><span class="m-num">1614</span><span class="m-sep" aria-hidden="true"></span><span class="m-name">HOME CO.</span></a>
-    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-menu">Menu</button>
-    <nav class="nav" id="site-menu" aria-label="On this page">
+    <div class="bar-end">
+      <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-bars" aria-hidden="true"></span></button>
+    </div>
+  </div>
+  <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
-        <li><a href="#visit">The visit</a></li>
-        <li><a href="#credit">Membership credit</a></li>
-        <li><a href="#request">Request</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li class="nav-call"><a href="tel:+16145859814">Call (614) 585-9814</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#checklist">What I check</a></li>
+        <li><a href="/#seasons">Seasons</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li class="nav-quote"><a href="/#quote">Get my quote</a></li>
       </ul>
     </nav>
-    <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
-  </div>
 </header>
 
 <main id="main">
@@ -336,7 +322,7 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
       <p><a href="mailto:justin@1614home.com">justin@1614home.com</a></p>
     </div>
     <div>
-      <p>1614 Home LLC · <a href="/privacy">Privacy</a></p>
+      <p>1614 Home LLC · <a href="/privacy">Privacy</a> · <a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a></p>
       <p>Justin Miller</p>
       <p class="verse">1 Corinthians 16:14</p>
     </div>
@@ -344,27 +330,11 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 </footer>
 
 <div class="mbar" role="region" aria-label="Quick contact">
-  <a class="btn btn-ghost" href="tel:+16145859814">Call</a>
-  <a class="btn" href="#request">Request a visit</a>
+  <a href="tel:+16145859814">Call</a>
+  <a href="sms:+16145859814">Text</a>
+  <a class="m-quote" href="/#quote">Get a quote</a>
 </div>
-
-<script>
-  (function () {
-    var btn = document.querySelector('.menu-btn');
-    var nav = document.getElementById('site-menu');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        nav.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  })();
-</script>
 <script src="/js/forms.js" defer></script>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>

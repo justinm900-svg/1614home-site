@@ -43,8 +43,9 @@ fbq('track', 'PageView');
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/forms.css">
 <link rel="stylesheet" href="/css/pages.css">
+<link rel="stylesheet" href="/css/chrome.css">
 </head>
-<body>
+<body class="has-mbar">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar on-dark">
   <div class="wrap">
@@ -52,8 +53,21 @@ fbq('track', 'PageView');
     <div class="bar-actions">
       <a class="bar-call" href="tel:+16145859814"><span>Call or text </span>(614) 585-9814</a>
       <a class="btn btn-primary btn-sm" href="/#quote">Get my quote</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-bars" aria-hidden="true"></span></button>
     </div>
   </div>
+  <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li class="nav-call"><a href="tel:+16145859814">Call (614) 585-9814</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#checklist">What I check</a></li>
+        <li><a href="/#seasons">Seasons</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li class="nav-quote"><a href="/#quote">Get my quote</a></li>
+      </ul>
+    </nav>
 </header>
 
 <main id="main" class="ck-page">
@@ -106,6 +120,7 @@ fbq('track', 'PageView');
         <div class="ck-also"><h3>While you're at it</h3><p>Change the furnace filter, clean the gutters and point the downspouts away from the house, and test your smoke and CO alarms.</p></div>
         <footer class="ck-sheet-foot">
           <div><strong>Rather have it done for you?</strong> A Winter Visit is $129 flat, about 45 minutes, booked through the end of February. <a href="https://1614home.co/winter">1614home.co/winter</a></div>
+          <div class="ck-end no-print"><a class="btn btn-solid" href="/#quote">Get my quote</a><a class="btn btn-outline" href="/home-record-sample">See a sample Home Record</a></div>
           <div class="ck-contact">Justin Miller · 1614 Home Co. · (614) 585-9814 · justin@1614home.com</div>
           <p class="ck-fine">General guidance for typical homes. If a valve is stuck, a pipe is leaking, or anything looks wrong, call a licensed plumber.</p>
         </footer>
@@ -117,7 +132,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <p><strong>1614 Home Co.</strong> · Quarterly home maintenance</p>
     <p>Serving <a href="/columbus">all of Columbus</a>, including <a href="/hilliard">Hilliard</a>, <a href="/dublin">Dublin</a>, <a href="/plain-city">Plain City</a>, <a href="/upper-arlington">Upper Arlington</a>, <a href="/worthington">Worthington</a>, <a href="/grandview">Grandview Heights</a>, <a href="/clintonville">Clintonville</a>, <a href="/bexley">Bexley</a>. <a href="/guides/">Guides</a>. <a href="/winter-checklist">Free winter checklist</a></p>
-    <p><a href="tel:+16145859814">(614) 585-9814</a> · <a href="mailto:justin@1614home.com">justin@1614home.com</a> · <a href="/privacy">Privacy</a></p>
+    <p><a href="tel:+16145859814">(614) 585-9814</a> · <a href="mailto:justin@1614home.com">justin@1614home.com</a> · <a href="/privacy">Privacy</a> · <a href="https://g.page/r/CaflkMg3975UEBI/review" target="_blank" rel="noopener">Leave a Google review</a></p>
     <p class="verse">“Let all that you do be done in love.” 1 Corinthians 16:14</p>
   </div>
 </footer>
@@ -135,5 +150,11 @@ fbq('track', 'PageView');
   document.addEventListener('hc:unlocked', function(){ unlock(true); });
 })();
 </script>
+<div class="mbar" role="region" aria-label="Quick contact">
+  <a href="tel:+16145859814">Call</a>
+  <a href="sms:+16145859814">Text</a>
+  <a class="m-quote" href="/#quote">Get a quote</a>
+</div>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>
