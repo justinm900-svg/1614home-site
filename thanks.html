@@ -29,8 +29,10 @@ src="https://www.facebook.com/tr?id=1638702684653694&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <script>
   (function () {
-    var freeze = /(?:^|[?&])type=freeze(?:&|$)/.test(location.search);
-    fbq('track', 'Lead', {content_name: freeze ? 'freeze' : 'quote'});
+    var type = '';
+    try { type = new URLSearchParams(window.location.search).get('type') || ''; } catch (e) {}
+    if (type !== 'freeze' && type !== 'winter') type = 'quote';
+    fbq('track', 'Lead', { content_name: type });
   })();
 </script>
 
